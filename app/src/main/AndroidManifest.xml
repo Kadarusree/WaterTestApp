@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="ramakrishna.watertest_image">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".ph.PH_MainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Home"
+            android:label="@string/title_activity_home"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PH_Test_Activity"
+            android:label="@string/ph_test"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PH_Test_Result"
+            android:label="PH TEST RESULT"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".Fluoride_Test_Activity"
+            android:label="FLUORIDE TEST"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fluoride_Test_Result"
+            android:label="FLUORIDE TEST RESULT"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Fluoride_Test_Activity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TDS_Test_Activity"
+            android:label="TDS TEST"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PH_Description"
+            android:label="WHAT IS PH?"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".PH_Options"
+            android:label="PH TEST"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fluoride_Description"
+            android:label="WHAT IS FLUORIDE"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Fluoride_Options"
+            android:label="FLUORIDE TEST"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TDS_Options"
+            android:label="TDS TEST"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TDS_Description"
+            android:label="WHAT IS TDS?"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".Test_Reports"
+            android:label="TEST SUMMARY"
+            android:launchMode="singleInstance"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Nitrate_Nitrite"
+            android:label="Nitrate/Nitrite"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Nitrate"
+            android:label="Nitrate"
+            android:parentActivityName=".Nitrate_Nitrite" />
+        <activity
+            android:name=".Nitrite"
+            android:label="Nitrite"
+            android:parentActivityName=".Nitrate_Nitrite" />
+        <activity
+            android:name=".Nitrate_Description"
+            android:label="What is Nitrate"
+            android:parentActivityName=".Nitrate" />
+        <activity
+            android:name=".Nitrite_Description"
+            android:label="What is Nitrite"
+            android:parentActivityName=".Nitrite" />
+        <activity
+            android:name=".Nitrate_Test"
+            android:label="Nitrate Test"
+            android:parentActivityName=".Nitrate" />
+        <activity
+            android:name=".Nitrite_Test"
+            android:label="Nitrite Test"
+            android:parentActivityName=".Nitrite" />
+        <activity
+            android:name=".Nitrate_Result"
+            android:label="Nitrate Result"
+            android:parentActivityName=".Nitrate_Test" />
+        <activity
+            android:name=".Nitrite_Result"
+            android:label="Nitrite Result"
+            android:parentActivityName=".Nitrite_Test" />
+        <activity
+            android:name=".Chloride.ChlorideActivity"
+            android:label="Chloride"
+            android:parentActivityName=".Home" />
+        <activity
+            android:name=".Chloride.Chloride_Description"
+            android:label="What is Chloride?"
+            android:parentActivityName=".Chloride.ChlorideActivity" />
+        <activity
+            android:name=".Chloride.ChlorideTest"
+            android:label="Chloride Test"
+            android:parentActivityName=".Chloride.Chloride_Description" />
+        <activity
+            android:name=".PH_Test_Result_new"
+            android:label="PH Result"
+            android:parentActivityName=".PH_Test_Activity" />
+        <activity android:name=".Main2Activity" />
+        <activity
+            android:name=".fluoride.FluorideMainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".tds.TDS_MainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nitrite.NITRITE_MainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".nitrate.NITRATE_MainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".chloride_new.ChlorideMainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".alkaline.AlkalineMainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".iron.IronMainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".hardness.HardnessMainActivity"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".iron.Iron_Result"
+            android:parentActivityName=".iron.IronMainActivity"
+            android:screenOrientation="portrait" />
+
+        <activity
+            android:name=".hardness.HardnessPart2"
+            android:parentActivityName=".hardness.HardnessMainActivity"
+            android:screenOrientation="portrait"
+            android:label="HARDNESS TEST"/>
+        <activity
+            android:name=".utils.BiologyTest"
+            android:label="MICROBIOLOGY TEST"
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait" />
+    </application>
+
+</manifest>

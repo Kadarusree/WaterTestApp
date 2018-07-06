@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_ph"
+            android:icon="@drawable/ic_laboratory"
+            android:title="PH" />
+        <item
+            android:id="@+id/nav_fl"
+            android:icon="@drawable/ic_laboratory"
+            android:title="FLOURIDE" />
+        <item
+            android:id="@+id/nav_tds"
+            android:icon="@drawable/ic_laboratory"
+            android:title="TDS" />
+        <item
+            android:id="@+id/nav_nitrate"
+            android:icon="@drawable/ic_laboratory"
+            android:title="NITRITE" />
+        <item
+            android:id="@+id/nav_arsenic"
+            android:icon="@drawable/ic_laboratory"
+            android:title="CHLORIDE" />
+        <item
+            android:id="@+id/nav_hardness"
+            android:icon="@drawable/ic_laboratory"
+            android:title="TOTAL HARDNESS" />
+        <item
+            android:id="@+id/nav_alkaline"
+            android:icon="@drawable/ic_laboratory"
+            android:title="ALKALINE" />
+        <item
+            android:id="@+id/nav_iron"
+            android:icon="@drawable/ic_laboratory"
+            android:title="IRON" />
+
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_test_summary"
+                android:icon="@drawable/ic_test"
+                android:title="TEST SUMMARY" />
+
+            <item
+                android:id="@+id/nav_test_reset"
+                android:icon="@drawable/ic_icon"
+                android:title="RESET" />
+
+            <item
+                android:id="@+id/nav_email"
+                android:icon="@drawable/ic_email_black_24dp"
+                android:title="SEND RESULTS" />
+
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="EXIT" />
+        </menu>
+    </item>
+
+</menu>

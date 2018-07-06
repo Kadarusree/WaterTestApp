@@ -1,0 +1,36 @@
+<html>
+<head>
+	<script language="javascript">
+			function login(){
+				
+				var name=document.getElementById('name').value;
+				var pass=document.getElementById('pass').value;
+					
+				myinterface.displayMsg(name,pass);
+			}
+	</script>
+
+</head>
+ <body bgcolor=#000033 text=#ffffff>
+	<form>
+	<center>
+<table>
+<tr>
+	<td colspan=2 align='center'>Login From</td>
+</tr>
+<tr>
+	<td>Enter Name : </td>
+	<td><input type="text" id="name"></td>
+</tr>
+<tr>
+	<td>Enter Pass : </td>
+	<td><input type="text" id="pass"></td>
+</tr>
+<tr>
+	<td colspan=2 align='center'><input type="submit" value="Login" onclick="login()"></td>
+</tr>
+</table>
+</center>
+	</form>
+ </body>
+</html>

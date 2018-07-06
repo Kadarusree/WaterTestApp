@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="ramakrishna.watertest_image.Chloride.ChlorideTest"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="CHLORIDE TEST PROCEDURE"
+        android:id="@+id/td_header_text"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:gravity="left|center"
+        android:text="@string/chloride_step1"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:gravity="left|center"
+        android:text="@string/chloride_step2"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_2"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:gravity="left|center"
+        android:text="@string/chloride_step3"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_3"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.08"
+        android:gravity="left|center"
+        android:text="@string/chloride_step4"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_4"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.15"
+        android:gravity="left|center"
+        android:text="@string/chloride_step5"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_5"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:hint="Enter Value Here"
+        android:layout_gravity="center"
+        android:textColor="@color/ph_10"
+        android:inputType="number"
+        android:maxLength="2"
+        android:id="@+id/edt_chloride_value"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center"
+        android:text="@string/chloride_step5"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/ch_6"
+
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="SUBMIT"
+        android:textColor="#ffffff"
+        android:background="@color/color_grey"
+        android:textSize="20dp"
+        android:id="@+id/btn_ch_submit"
+        />
+
+</LinearLayout>

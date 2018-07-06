@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="ramakrishna.watertest_image.PH_Test_Result_new">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Capture Result"
+        android:id="@+id/btn_capture"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="PICK RESULT FROM GALLERY"
+        android:id="@+id/btn_gallery"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:id="@+id/img_output"/>
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Capture Result"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_result_color1"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Capture Result"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_result_color2"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="Capture Result"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:textColor="#ffffff"
+        android:id="@+id/tv_result_color3"/>
+</LinearLayout>

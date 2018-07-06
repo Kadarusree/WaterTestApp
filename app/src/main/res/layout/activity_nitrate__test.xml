@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="ramakrishna.watertest_image.PH_Test_Activity"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="PROCEDURE FOR NITRATE TEST"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"/>
+    <TextView
+        android:id="@+id/nitrate_step1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:text="@string/nitrate_step1"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/color_grey"
+        android:gravity="left|center"/>
+    <TextView
+        android:id="@+id/nitrate_step2"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:text="@string/nitrate_step2"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/color_grey"
+        android:gravity="left|center"/>
+    <TextView
+        android:id="@+id/nitrate_step3"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.12"
+        android:text="@string/nitrate_step3"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/color_grey"
+        android:gravity="left|center"/>
+    <TextView
+        android:id="@+id/nitrate_step4"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:text="@string/nitrate_step4"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/color_grey"
+        android:gravity="left|center"/>
+    <TextView
+        android:id="@+id/nitrate_step5"
+
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.11"
+        android:text="@string/nitrate_step5"
+        android:textStyle="bold"
+        android:textSize="18dp"
+        android:textColor="@color/color_grey"
+        android:gravity="left|center"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.25">
+        <Button
+            android:id="@+id/btn_nitratetest_complete"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_weight="0.2"
+            android:text="TEST COMPLETE"
+            android:background="@color/color_grey"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:textColor="#ffffff"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:minWidth="250dp"
+    android:orientation="vertical"
+    android:layout_height="300dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="     One Time Registration    "
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:typeface="serif"/>
+
+
+
+    <EditText
+        android:id="@+id/username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:hint="Enter your name"
+        android:imeOptions="actionNext"
+        android:maxLength="40"
+        android:maxLines="1"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:typeface="serif" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:hint="Enter your school name"
+        android:id="@+id/schoolname"
+        android:maxLength="40"
+        android:imeOptions="actionNext"
+        android:typeface="serif"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:id="@+id/mobile_num"
+        android:hint="10 Digit mobile number"
+        android:maxLength="10"
+        android:inputType="number"
+        android:imeOptions="actionNext"
+        android:typeface="serif"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:hint="Enter your email"
+        android:inputType="textEmailAddress"
+        android:imeOptions="actionNext"
+        android:id="@+id/email_reg"
+        android:maxLength="40"
+        android:typeface="serif"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:id="@+id/adress"
+        android:hint="Address"
+        android:maxLength="40"
+        android:imeOptions="actionDone"
+        android:typeface="serif"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Save"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:id="@+id/btn_register"
+        android:typeface="serif"/>
+
+</LinearLayout>

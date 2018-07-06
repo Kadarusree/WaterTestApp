@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="140dp"
+    android:orientation="vertical"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/colorPrimary"
+        android:text="Enter Value"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textColor="#ffffff"
+        android:gravity="center"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:textStyle="bold"
+        android:inputType="number"
+        android:typeface="serif"
+        android:textColor="@color/colorPrimaryDark"
+        android:gravity="center"
+        android:maxLength="3"
+        android:id="@+id/mValue"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:background="@color/colorPrimary"
+        android:text="Submit"
+        android:textStyle="bold"
+        android:typeface="serif"
+        android:textColor="#ffffff"
+        android:gravity="center"
+        android:id="@+id/mSubmit"/>
+</LinearLayout>

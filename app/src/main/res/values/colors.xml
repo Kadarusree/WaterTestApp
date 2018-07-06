@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#20d2bb</color>
+    <color name="colorPrimaryDark">#20d2bb</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="color_green">#FF1FB32E</color>
+    <color name="color_grey">#889189</color>
+
+    <!-- Screens background color-->
+
+    <color name="bg_screen1">#20d2bb</color>
+    <color name="bg_screen2">#3395ff</color>
+    <color name="bg_screen3">#c873f4</color>
+
+
+    <color name="ph_1">#FB453F</color>
+    <color name="ph_2">#FF785D</color>
+    <color name="ph_3">#F37634</color>
+    <color name="ph_4">#FBCA52</color>
+    <color name="ph_5">#F0DC48</color>
+    <color name="ph_6">#85AC38</color>
+    <color name="ph_7">#9ABD76</color>
+    <color name="ph_8">#8BBC94</color>
+    <color name="ph_9">#78C5b7</color>
+    <color name="ph_10">#87B6C8</color>
+    <color name="ph_11">#55438F</color>
+
+    <color name="colorNavIcon">#FFFFFF</color>
+    <color name="colorNavText">#FFFFFF</color>
+
+    <color name="ph_12">#442A60</color>
+
+
+
+    <color name="ph_13">#662E93</color>
+    <color name="ph_14">#92278F</color>
+
+    <color name="fl_1">#FF5982</color>
+    <color name="fl_2">#FBAEC1</color>
+    <color name="fl_3">#FE7A6C</color>
+    <color name="fl_4">#FFA589</color>
+    <color name="fl_5">#FFA86D</color>
+    <color name="fl_6">#FFC199</color>
+
+    <color name="iron_1">#F0F0F2</color>
+    <color name="iron_2">#E9DFD7</color>
+    <color name="iron_3">#F6C8A1</color>
+    <color name="iron_4">#FD946E</color>
+    <color name="iron_5">#E46342</color>
+
+
+    <color name="nitrate_1">#FFFBFC</color>
+    <color name="nitrate_2">#FDF2F8</color>
+    <color name="nitrate_3">#FBE5F2</color>
+    <color name="nitrate_4">#F5C0DC</color>
+    <color name="nitrate_5">#E681B9</color>
+    <color name="nitrate_6">#CF0372</color>
+
+
+</resources>

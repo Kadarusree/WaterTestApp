@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:layout_height="120dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Enter Email"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:typeface="serif"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="embedded.training.rama@gmail.com"
+        android:gravity="center"
+        android:textColor="@color/colorPrimary"
+        android:textSize="12dp"
+        android:maxLines="1"
+        android:id="@+id/email_edt"
+        android:maxLength="40"
+        android:typeface="serif"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Send"
+        android:gravity="center"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textStyle="bold"
+        android:id="@+id/btn_sendEmail"
+        android:typeface="serif"/>
+
+</LinearLayout>

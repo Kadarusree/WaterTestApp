@@ -1,0 +1,184 @@
+<resources>
+    <string name="app_name">WaterTest_Image</string>
+    <string name="title_activity_home">Home</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="ph_test">PH TEST</string>
+    <string name="ph_test_step1">Step 1: Take 10ml of water sample in the test bottle</string>
+    <string name="ph_test_step2">Step 2: Add 3 – 4 drops pH – Reagent and mix well till water color changes</string>
+    <string name="ph_test_step3">Step 3: Once the color changes press Test Complete button</string>
+
+
+    <string name="f__test_step1">Step 1: Take 5ml of water sample in the test bottle</string>
+    <string name="f__test_step2">Step 2: Add 5 drops of fluoride reagent -1 and mix well till the water color
+changes.</string>
+    <string name="f__test_step3">Step 3: Once the color changes press Test Complete button</string>
+
+
+    <string name="tds_1">1. Place the  TDS meter inside the water glass. Press the ON button</string>
+    <string name="tds_2">2. You can observe 0 value in the display</string>
+    <string name="tds_3">3. Press the hold button, you can see value change</string>
+    <string name="tds_4">4. Enter the new value in the text box below</string>
+    <string name="tds_5">5. After entered press the below button to display result</string>
+
+    <string name="ph_description">The term pH stands for “potential for hydrogen.”
+The term pH is a measure of the concentration of hydrogen ions in a diluted solution. It can range from 0 to 14, with 7 denoting a neutral value. Acidic water has a pH below 7; alkaline water, above 7. The health effects of pH on drinking water depend upon where the pH falls within its range. The U.S. Environmental Protection Agency, which classifies pH as a secondary drinking water standard, recommends a pH between 6.5 and 8.5 for drinking water.
+According to the World Health Organization, health effects are most pronounced in pH extremes. Drinking water with an elevated pH above 11 can cause skin, eye and mucous membrane irritation. On the opposite end of the scale, pH values below 4 also cause irritation due to the corrosive effects of low pH levels. WHO warns that extreme pH levels can worsen existing skin conditions.
+In general, water with a pH less than 6.5 could be acidic, soft, and corrosive. Acidic water could contain metal ions such as iron, manganese, copper, lead, and zinc. In other words, acidic water contains elevated levels of toxic metals . Recommends a pH between 6.5 and 8.5 for drinking water.\n\n
+
+High levels of lead in drinking water is a primary concern of pH. It places adults at risk for health problems such as cancer, stroke, kidney disease, memory problems and high blood pressure. Children are at a greater risk because their rapidly growing bodies absorb the contaminant more quickly.\n\n
+
+Copper, Iron, Zinc and Manganese are also classified as secondary drinking water contaminants. These contaminants are likely to cause hard water and staining problems at home. But if found in elevated levels, they could cause a variety of health issues. That includes nausea, vomiting, diarrhea, stomach cramps, kidney disease, liver disease and nervous system problems.
+</string>
+
+
+    <string name="flouride_description">Health guide line value : 1.5 mg/L\n\n
+Fluoride is found in all natural waters. Seawater contains 1.2-1.5 ppm of fluoride. Freshwater concentrations are usually lower ranging from 0.01 to 0.3 ppm. Higher concentrations of fluoride in water can be present near hot springs of volcanic origin .\n\n
+Important for preventing dental decay and strengthening teeth, but can be harmful at high concentrations. Found naturally in rocks and waters and is sometimes present in industrial air pollution.\n\n
+
+
+Fluoride Affects Many Tissues in Your Body Besides Your Teeth\n\n
+Many assume that consuming fluoride is only an issue that involves your dental health. But according to a 500-page scientific review, fluoride is an endocrine disruptor that can affect your bones, brain, thyroid gland, pineal gland and even your blood sugar levels.2\n\n
+There have been over 34 human studies and 100 animal studies linking fluoride to brain damage,3 including lower IQ in children, and studies have shown that fluoride toxicity can lead to a wide variety of health problems. Babies given fluoridated water in their formula are not only more likely to develop dental fluorosis, but may also have reduced IQ scores. In fact, a Harvard University meta-analysis funded by the National Institutes of Health (NIH) concluded that children who live in areas with highly fluoridated water have "significantly lower" IQ scores than those who live in low fluoride areas.\n\n
+</string>
+
+    <string name="tds_description">Water is a good solvent and picks up impurities easily.  Pure water -- tasteless, colorless, and odorless -- is often called the universal solvent.   Dissolved solids" refer to any minerals, salts, metals, cations or anions dissolved in water. Total dissolved solids (TDS) comprise inorganic salts (principally calcium, magnesium, potassium, sodium, bicarbonates, chlorides, and sulfates) and some small amounts of organic matter that are dissolved in water.
+TDS in drinking-water originate from natural sources, sewage, urban run-off, industrial wastewater, and chemicals used in the water treatment process, and the nature of the piping or hardware used to convey the water, i.e., the plumbing
+</string>
+
+    <string name="ph_low">“The pH value of this water sample is below 6 . Exposure to low pH levels can result in bigger problems. That’s because acidic water allows the metals in your pipes to leach into your water supply. When these metals get into your water, they can wreak havoc on your plumbing system and lead to potential health problems.
+When it comes to your plumbing system, acidic water can prematurely corrode your pipes and stain your sinks and drains. It can also stain your clothes and result in water that smells bad and tastes metallic.
+When you consume these metals, neurological and reproductive issues can occur, along with the fact that many of these metals are carcinogenic.
+
+</string>
+    <string name="ph_high">“According to the World Health Organization, exposure to pH levels above 11 results in irritation of the eyes, skin and mucous membranes, as well as worsening symptoms of skin disorders.
+
+</string>
+    <string name="ph_normal">Drinking water must have a pH value of 6.5-8.5 to fall within EPA standards. The pH level of this water is in permissable limit</string>
+
+
+    <string name="fl_low"></string>
+    <string name="fl_normal">The fluoride of this water sample is less than 1.5 mg/L
+“This drinking water has the permissible limit of fluoride “
+</string>
+    <string name="fl_high">The fluoride content in drinking water is higher than health guideline as per EPA.
+High fluoride causes fluorosis. Babies given fluoridated water in their formula are not only more likely to develop dental fluorosis, but may also have reduced IQ scores. In fact, a Harvard University meta-analysis funded by the National Institutes of Health (NIH) concluded that children who live in areas with highly fluoridated water have "significantly lower" IQ scores than those who live in low fluoride areas.
+</string>
+
+
+    <string name="nitrate_desc">Nitrate is one of the most common groundwater contaminants in rural areas. It is regulated in drinking water primarily because excess levels can cause methemoglobinemia, or "blue baby" disease. Although nitrate levels that affect infants do not pose a direct threat to older children and adults, they do indicate the possible presence of other more serious residential or agricultural contaminants, such as bacteria or pesticides.\n\n
+Nitrate in groundwater originates primarily from fertilizers, septic systems, and manure storage or spreading operations. Fertilizer nitrogen that is not taken up by plants, volatilized, or carried away by surface runoff leaches to the groundwater in the form of nitrate. This not only makes the nitrogen unavailable to crops, but also can elevate the concentration in groundwater above the levels acceptable for drinking water quality. Nitrogen from manure similarly can be lost from fields, barnyards, or storage locations. Septic systems also can elevate groundwater nitrate concentrations because they remove only half of the nitrogen in wastewater, leaving the remaining half to percolate to groundwater.\n\n
+recommended limit for nitrate-nitrogen at 10 mg/L. T
+</string>
+
+
+    <string name="nitrate_step1">1.	Take 10ml of water sample in a test tube.</string>
+    <string name="nitrate_step2">2.	Add a pinch of Nitrate reagent -1 mix well and wait for 5 minutes</string>
+    <string name="nitrate_step3">3.	After 5 minutes take the 5 ml of  above water mix to another test tube</string>
+    <string name="nitrate_step4">4.	Then add 3 drops of Nitrate reagent -2 to the second test tube water sample. Wait for 5 minutes with occasional shaking.</string>
+    <string name="nitrate_step5">5.	Once the color change happened press test complete button</string>
+
+
+    <string name="nitrate_safe">The nitrate value present in this water sample is  is under 10 PPM. The Nitrate value is in permissible limits.</string>
+    <string name="nitrate_danger">The nitrate value present in this water sample is  higher than 10 PPM.
+Nitrate is one of the most common groundwater contaminants in rural areas. It is regulated in drinking water primarily because excess levels can cause methemoglobinemia, or "blue baby" disease.
+</string>
+
+    <string name="nitrite_safe">This water is suitable for drinking purpose. The Nitrate values are in permissible limits.\n\nHealth guide line value : 3 mg/LT</string>
+    <string name="nitrite_danger">The primary health hazard from drinking water with nitrate-nitrogen occurs when nitrate is transformed to nitrite in the digestive system. The nitrite oxidizes the iron in the hemoglobin of the red blood cells to form methemoglobin, which lacks the oxygen-carrying ability of hemoglobin. This creates the condition known as methemoglobinemia (sometimes referred to as "blue baby syndrome"), in which blood lacks the ability to carry sufficient oxygen to the individual body cells causing the veins and skin to appear blue.   Note - The health concern is primarily related to potential exposure through consumptions by infants.\n\n
+Nitrate is one of the most common groundwater contaminants in rural areas. It is regulated in drinking water primarily because excess levels can cause methemoglobinemia, or "blue baby" disease.\n\n
+This water sample is not suitable for drinking purpose.
+</string>
+
+
+    <string name="nitrite_step1">1. Take 10 ml of water sample in a test tube.</string>
+    <string name="nitrite_step2">2. Add a pinch of nitrite reagent - 1 mix well.
+         and Wait for 5 minutes</string>
+    <string name="nitrite_step3">3. Once the color change happened press test complete button</string>
+
+
+    <string name="chloride_description">Chloride toxicity has not been observed in humans except in the special case of impaired sodium chloride metabolism, e.g. in congestive heart failure. Healthy individuals can tolerate the intake of large quantities of chloride provided that there is a concomitant intake of fresh water. Little is known about the effect of prolonged intake of large amounts of chloride in the diet. As in experimental animals, hypertension associated with sodium chloride intake appears to be related to the sodium rather than the chloride ion.\n\n
+Research has shown, however, that long‐term exposure to chlorine leads to the production of free radicals within the body. Free radicals are carcinogenic, and cause tremendous damage to our cells.¹ Children exposed to large amounts of chlorine could potentially suffer asthmatic attacks. \n\n
+Chlorine can irritate severely, even burn, skin exposed directly to it. It can irritate and burn the eyes and throat as well.
+</string>
+
+    <string name="chloride_step5">5. Test Complete</string>
+    <string name="chloride_step1">1. Take 25 ml of water sample in a test tube.</string>
+    <string name="chloride_step2">2. Add 5 drops of chloride reagent-1 and mix well until a distinct yellow colour develops.</string>
+    <string name="chloride_step3">3. Add chloride reagent – 2, shake well after each drop until the colour changes from yellow to red.  Count the number of drops of chloride -2 required for color change.</string>
+    <string name="chloride_step4">4. Once the color change happened from yellow to red, Enter the drop the count in the below text box. After Entered the value Please press on Submit button.</string>
+
+
+    <string name="chloride_high">The Chloride of the water sample is > 250 PPM. This is not within the permissible limit.
+ The implications are
+Taste affected, Corrosive, Plant damage, salt water intrusion.
+</string>
+    <string name="chloride_low"> The Chloride of the water sample is under 250 PPM. This is in the permissible limit as per EPA standards</string>
+
+    <string name="title_shop">TEST</string>
+    <string name="title_gifts">HELP</string>
+    <string name="title_cart">RESULT LOG</string>
+
+
+    <string name="tds_below_300">This water sample has TDS rating under 300 ppm. This is excellent rating</string>
+    <string name="tds_300_600">This water sample has TDS rating is between  300 and  600 ppm. This is good rating</string>
+    <string name="tds_600_900">This water sample has TDS rating is between 600 and  900 ppm. This is Fair rating</string>
+    <string name="tds_900_1200">This water sample has TDS rating  is between 900 and  1200 ppm. This is poor rating
+</string>
+    <string name="tds_above_1200">This water sample has TDS rating is between 1200 ppm. This is Unacceptable
+</string>
+
+
+    <string name="alk_1"> 1. Take 25 ml of water sample in the test bottle</string>
+    <string name="alk_2"> 2. Add 4-5 drops of Total alkalinity Reagent-2 (TA-2) and mix until an orange-yellow color develops.
+</string>
+    <string name="alk_3">3. Add Total Alkalinity Reagent-1(TA-1), shake well after each drop until the color changes from orange-yellow to orange-red. Count the no of drops of TA-1 required for color change.</string>
+    <string name="alk_4">4. Once the color change please enter the number of drops count in the below text box, After Entering the value, Press submit button</string>
+
+    <string name="alk_under_200">The total alkalinity of the water sample is under 200 PPM. This is in the permissible limit as per EPA standards</string>
+    <string name="alk_above_200">The total alkalinity of the water sample is more than 200 PPM. This is not within the permissible limit.
+The implications are
+Taste becomes unpleasant, boiled rice is yellowish, the measure of buffering capacity of water affects anaerobic digestion.
+</string>
+
+
+    <string name="iron_1">1. Take  5ml of water sample in the test bottle</string>
+    <string name="iron_2">2. Add 5 drops of Iron reagent -1 (Fe-1) and 1 drop of Iron reagent -2 (Fe-2). Mix and add 5 drops of Iron reagent (Fe-3). </string>
+    <string name="iron_3">3. Mix the contents and wait for 2-3 minutes to develop the color.</string>
+    <string name="iron_4">4. Once the color changes press Test Complete button</string>
+
+
+    <string name="iron_normal">The iron content of this water sample is under 0.3 PPM. The value is within the permissible limit</string>
+    <string name="iron_high">The iron content of this water sample is more than 0.3 PPM. The value is not within the permissible limit.   \nThe implications are Unattractive color and taste, stains plumbing fixtures, laundry and cooking utensils deposits and growth of iron bacteria, turbidity.</string>
+
+
+    <string name="total_hardness_1">1. Take 25ml of water sample in the test bottle </string>
+    <string name="total_hardness_2">2. Add 10 drops of Total Hardness reagent-2 (TH-2) and mix
+(Plain water + Reagent)  (step result water)
+ </string>
+    <string name="total_hardness_3">3. Add few specs of total hardness reagent -1 (Th-1) and mix until a distinct pink color develops</string>
+    <string name="total_hardness_4">4. Choose your type of water</string>
+
+    <string name="hard_water">For Hard water, add Total Hardness reagent -3 (TH-3), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-3 required for color change.
+</string>
+    <string name="soft_water">For Soft Water, add Total Hardness reagent -3 (TH-3), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-3 required for color change.
+(Pink color sample + reagent) (Result blue water)
+</string>
+    <string name="very_hard_water">        For very hard water, add Total Hardness reagent -5 (TH-5), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-5 required for color change.
+</string>
+    <string name="total_hardness_5">Enter the number of drop count in the text box below, After Entering the value press submit button</string>
+
+
+    <string name="hardness_normal">The total hardness of the water sample is under 300 PPM.  The Hardness of this water sample is in permissible limit</string>
+    <string name="hardness_high">The total hardness of the water sample is above 300 PPM.  The Hardness of this water sample is not in the permissible limit.
+The impact of Hardness of in water sample is
+Poor leathering with soap, deterioration of clothes, scale forming, Encrustation in water supply structure, skin irritation, Hair fall, boiled meat/food becomes poor in quality, high hardness leads the poor growth of plants.
+</string>
+    <string name="mb1">1. Fill the water sample into the Bottle up to the arrow mark. Screw the cap and shake gently.</string>
+    <string name="mb2">2. Keep the bottle at room temperature (preferably at 30-37 centigrade) for 24-48 hours.</string>
+    <string name="mb3">3. Observe the colourcolor change of medium against the colourcolor chart.</string>
+    <string name="mb4">4. Add a few drops of some disinfectant (Dettol or phenyl) and discard the solution.</string>
+</resources>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:orientation="vertical"
+    tools:context="ramakrishna.watertest_image.TDS_Test_Activity"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.2"
+        android:gravity="center"
+        android:text="@string/tds_1"
+        android:id="@+id/td_header_text"
+        android:textSize="20dp"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center"
+        android:text="@string/tds_1"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_1"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:gravity="left|center"
+        android:text="@string/tds_2"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_2"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.07"
+        android:gravity="left|center"
+        android:text="@string/tds_3"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_3"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center"
+        android:text="@string/tds_4"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_4"
+
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center"
+        android:text="@string/tds_5"
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_5"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:textSize="20dp"
+        android:hint="Enter Value Here"
+        android:layout_gravity="center"
+        android:textColor="@color/ph_10"
+        android:inputType="number"
+        android:maxLength="3"
+        android:id="@+id/edt_td_value"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="left|center"
+
+        android:textSize="17dp"
+        android:textColor="@color/color_grey"
+        android:id="@+id/tds_6"
+
+
+        />
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.1"
+        android:gravity="center"
+        android:text="SUBMIT"
+        android:textColor="#ffffff"
+        android:background="@color/color_grey"
+        android:textSize="20dp"
+        android:id="@+id/btn_submit"
+        />
+
+</LinearLayout>
