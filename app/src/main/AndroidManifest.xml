@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"></uses-permission>
 
     <application
         android:allowBackup="true"
@@ -17,7 +18,9 @@
         <activity
             android:name=".ph.PH_MainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"
+            android:launchMode="singleInstance"/>
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -33,31 +36,38 @@
             android:name=".PH_Test_Activity"
             android:label="@string/ph_test"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            />
         <activity
             android:name=".PH_Test_Result"
             android:label="PH TEST RESULT"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
-            android:screenOrientation="landscape" />
+            android:screenOrientation="landscape"
+            android:noHistory="true"/>
         <activity
             android:name=".Fluoride_Test_Activity"
             android:label="FLUORIDE TEST"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
         <activity
             android:name=".Fluoride_Test_Result"
             android:label="FLUORIDE TEST RESULT"
             android:launchMode="singleInstance"
             android:parentActivityName=".Fluoride_Test_Activity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
         <activity
             android:name=".TDS_Test_Activity"
             android:label="TDS TEST"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:noHistory="true"/>
         <activity
             android:name=".PH_Description"
             android:label="WHAT IS PH?"
@@ -98,7 +108,8 @@
             android:name=".Test_Reports"
             android:label="TEST SUMMARY"
             android:launchMode="singleInstance"
-            android:parentActivityName=".Home" />
+            android:parentActivityName=".Home"
+            android:noHistory="true"/>
         <activity
             android:name=".Nitrate_Nitrite"
             android:label="Nitrate/Nitrite"
@@ -122,15 +133,20 @@
         <activity
             android:name=".Nitrate_Test"
             android:label="Nitrate Test"
-            android:parentActivityName=".Nitrate" />
+            android:parentActivityName=".Nitrate"
+            android:noHistory="true"/>
         <activity
             android:name=".Nitrite_Test"
             android:label="Nitrite Test"
-            android:parentActivityName=".Nitrite" />
+            android:parentActivityName=".Nitrite"
+            android:launchMode="singleInstance"/>
         <activity
             android:name=".Nitrate_Result"
             android:label="Nitrate Result"
-            android:parentActivityName=".Nitrate_Test" />
+            android:parentActivityName=".Nitrate_Test"
+            android:launchMode="singleInstance"
+            android:noHistory="true"
+            />
         <activity
             android:name=".Nitrite_Result"
             android:label="Nitrite Result"
@@ -138,7 +154,8 @@
         <activity
             android:name=".Chloride.ChlorideActivity"
             android:label="Chloride"
-            android:parentActivityName=".Home" />
+            android:parentActivityName=".Home"
+            android:noHistory="true"/>
         <activity
             android:name=".Chloride.Chloride_Description"
             android:label="What is Chloride?"
@@ -146,54 +163,77 @@
         <activity
             android:name=".Chloride.ChlorideTest"
             android:label="Chloride Test"
-            android:parentActivityName=".Chloride.Chloride_Description" />
+            android:parentActivityName=".Chloride.Chloride_Description"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".PH_Test_Result_new"
             android:label="PH Result"
-            android:parentActivityName=".PH_Test_Activity" />
+            android:parentActivityName=".PH_Test_Activity"
+            android:launchMode="singleInstance"/>
         <activity android:name=".Main2Activity" />
         <activity
             android:name=".fluoride.FluorideMainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".tds.TDS_MainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".nitrite.NITRITE_MainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".nitrate.NITRATE_MainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".chloride_new.ChlorideMainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".alkaline.AlkalineMainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".iron.IronMainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".hardness.HardnessMainActivity"
             android:parentActivityName=".Home"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".iron.Iron_Result"
             android:parentActivityName=".iron.IronMainActivity"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
 
         <activity
             android:name=".hardness.HardnessPart2"
             android:parentActivityName=".hardness.HardnessMainActivity"
             android:screenOrientation="portrait"
-            android:label="HARDNESS TEST"/>
+            android:label="HARDNESS TEST"
+            android:launchMode="singleInstance"
+            android:noHistory="true"/>
         <activity
             android:name=".utils.BiologyTest"
             android:label="MICROBIOLOGY TEST"

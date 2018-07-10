@@ -50,6 +50,7 @@ public class Nitrite_Result extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.stop();
             }
         });
         d.show();
@@ -131,8 +132,6 @@ public class Nitrite_Result extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onPause() {
         super.onPause();
-        if (mediaPlayer.isPlaying()){
-            mediaPlayer.stop();
-        }
+        mediaPlayer.release();
     }
 }

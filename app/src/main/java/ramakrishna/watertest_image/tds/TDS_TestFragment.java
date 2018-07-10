@@ -22,6 +22,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ramakrishna.watertest_image.PH_Test_Result;
 import ramakrishna.watertest_image.R;
@@ -83,7 +84,7 @@ public class TDS_TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-                getActivity().onBackPressed();
+                getActivity().finish();
 
             }
         });
@@ -204,7 +205,14 @@ public class TDS_TestFragment extends Fragment {
             public void onClick(View v) {
 
                 dialog.dismiss();
-                playResult(Integer.parseInt(mEditText.getText().toString()));
+                int val = Integer.parseInt(mEditText.getText().toString());
+
+                if (mEditText.getText().toString().trim().length()==0){
+                    Toast.makeText(getActivity(),"Enter Drops Count",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    playResult(Integer.parseInt(mEditText.getText().toString()));
+                }
             }
         });
 
@@ -254,14 +262,14 @@ public class TDS_TestFragment extends Fragment {
         if (mediaPlayer!=null){
             mediaPlayer.release();
         }
-        if (value<=299){
+        if (value<=300){
             mediaPlayer= MediaPlayer.create(getActivity(),R.raw.tds_5);
             Result mResult = new Result(1, Constants.TDS_TEST,"TDS",value+"","mg/l","#F3DA35","");
             DatabaseHelper mHelper = new DatabaseHelper(getActivity());
             mHelper.insertResult(mResult);
             show_Dialog(value+"",getActivity().getResources().getString(R.string.tds_below_300));
         }
-        else if(value>=300&&value<600){
+        else if(value>=301&&value<=600){
             mediaPlayer= MediaPlayer.create(getActivity(),R.raw.tds_6);
             Result mResult = new Result(1, Constants.TDS_TEST,"TDS",value+"","mg/l","#F3DA35","");
             DatabaseHelper mHelper = new DatabaseHelper(getActivity());
@@ -269,7 +277,7 @@ public class TDS_TestFragment extends Fragment {
             show_Dialog(value+"",getActivity().getResources().getString(R.string.tds_300_600));
 
         }
-        else if(value>=600&&value<900){
+        else if(value>=601&&value<=900){
             mediaPlayer= MediaPlayer.create(getActivity(),R.raw.tds_7);
             Result mResult = new Result(1, Constants.TDS_TEST,"TDS",value+"","mg/l","#F3DA35","");
             DatabaseHelper mHelper = new DatabaseHelper(getActivity());
@@ -277,7 +285,7 @@ public class TDS_TestFragment extends Fragment {
             show_Dialog(value+"",getActivity().getResources().getString(R.string.tds_600_900));
 
         }
-        else if(value>=900&&value<1200){
+        else if(value>=901&&value<=1200){
             mediaPlayer= MediaPlayer.create(getActivity(),R.raw.tds_8);
             Result mResult = new Result(1, Constants.TDS_TEST,"TDS",value+"","mg/l","#F13F37","");
             DatabaseHelper mHelper = new DatabaseHelper(getActivity());
@@ -285,7 +293,7 @@ public class TDS_TestFragment extends Fragment {
             show_Dialog(value+"",getActivity().getResources().getString(R.string.tds_900_1200));
 
         }
-        else if(value>=1200){
+        else if(value>1200){
             mediaPlayer= MediaPlayer.create(getActivity(),R.raw.tds_9);
             Result mResult = new Result(1, Constants.TDS_TEST,"TDS",value+"","mg/l","#F13F37","");
             DatabaseHelper mHelper = new DatabaseHelper(getActivity());
@@ -305,13 +313,12 @@ public class TDS_TestFragment extends Fragment {
 
         tv.setText("The TDS content of this water sample is " + value + "\n\n" + text);
 
-        tv.setVisibility(View.GONE);
-
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.release();
             }
         });
         d.show();

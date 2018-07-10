@@ -1,9 +1,12 @@
 package ramakrishna.watertest_image;
 
 import android.app.Dialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -69,10 +72,10 @@ public class Home extends AppCompatActivity
                 getBaseContext().getResources().getDisplayMetrics());*/
 
         mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio_2);
-if (!Constants.audio_played){
-    mediaPlayer.start();
-    Constants.audio_played=true;
-}
+        if (!Constants.audio_played) {
+            mediaPlayer.start();
+            Constants.audio_played = true;
+        }
 
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
@@ -95,10 +98,10 @@ if (!Constants.audio_played){
         test_names.add("TDS TEST");
         test_names.add("NITRATE TEST");
         test_names.add("CHLORIDE TEST");
-       test_names.add("TOTAL HARDNESS TEST");
+        test_names.add("TOTAL HARDNESS TEST");
         test_names.add("ALKALINE TEST");
         test_names.add("IRON TEST");
-       // test_names.add("MICROBIOLOGY TEST");
+        // test_names.add("MICROBIOLOGY TEST");
         test_names.add("TEST REPORTS");
 
         test_images = new ArrayList<>();
@@ -107,10 +110,10 @@ if (!Constants.audio_played){
         test_images.add(R.drawable.img_tds);
         test_images.add(R.drawable.img_nitrate);
         test_images.add(R.drawable.img_chloride);
-       test_images.add(R.drawable.total_hardness);
+        test_images.add(R.drawable.total_hardness);
         test_images.add(R.drawable.img_alkaline);
         test_images.add(R.drawable.img_iron);
-       // test_images.add(R.drawable.biologytest);
+        // test_images.add(R.drawable.biologytest);
         test_images.add(R.drawable.img_reports);
 
 
@@ -126,7 +129,7 @@ if (!Constants.audio_played){
 
                         switch (position) {
                             case 0:
-                           //     startActivity(new Intent(Home.this, PH_Options.class));
+                                //     startActivity(new Intent(Home.this, PH_Options.class));
 
                                 startActivity(new Intent(Home.this, PH_MainActivity.class));
 
@@ -166,8 +169,7 @@ if (!Constants.audio_played){
                                 startActivity(new Intent(Home.this, BiologyTest.class));
                                 break;*/
                             case 8:
-                           startActivity(new Intent(Home.this, Test_Reports.class));
-
+                                startActivity(new Intent(Home.this, Test_Reports.class));
 
 
                                 break;
@@ -225,34 +227,27 @@ if (!Constants.audio_played){
 
         } else if (id == R.id.nav_send) {
             super.onBackPressed();
-        }
-        else if (id == R.id.nav_test_summary) {
+        } else if (id == R.id.nav_test_summary) {
             startActivity(new Intent(getApplicationContext(), Test_Reports.class));
-        }
-        else if (id == R.id.nav_alkaline) {
+        } else if (id == R.id.nav_alkaline) {
             startActivity(new Intent(getApplicationContext(), AlkalineMainActivity.class));
-        }
-        else if (id == R.id.nav_iron) {
+        } else if (id == R.id.nav_iron) {
             startActivity(new Intent(getApplicationContext(), IronMainActivity.class));
-        }
-        else if (id == R.id.nav_email) {
-sendEmailBox();
-        }
-        else if (id == R.id.nav_send) {
+        } else if (id == R.id.nav_email) {
+            sendEmailBox();
+        } else if (id == R.id.nav_send) {
             finish();
-        }
-        else if (id == R.id.nav_hardness) {
+        } else if (id == R.id.nav_hardness) {
             startActivity(new Intent(getApplicationContext(), HardnessMainActivity.class));
-        }
-        else if (id == R.id.nav_test_reset) {
+        } else if (id == R.id.nav_test_reset) {
            /* SharedPreferences mSharedPreferences=getSharedPreferences("WATER_TEST", Context.MODE_PRIVATE);
             SharedPreferences.Editor mEditor=mSharedPreferences.edit();
             mEditor.clear();
             mEditor.commit();*/
 
             DatabaseHelper mHelper = new DatabaseHelper(this);
-         int count =   mHelper.clearDB();
-         Toast.makeText(getApplicationContext(),count+" Records Deleted",Toast.LENGTH_LONG).show();
+            int count = mHelper.clearDB();
+            Toast.makeText(getApplicationContext(), count + " Records Deleted", Toast.LENGTH_LONG).show();
 
         }
 
@@ -265,24 +260,29 @@ sendEmailBox();
     protected void onPause() {
         super.onPause();
 
-            mediaPlayer.release();
+        mediaPlayer.release();
 
     }
 
-    public void sendEmailBox(){
+    public void sendEmailBox() {
         final Dialog d = new Dialog(this);
         d.setContentView(R.layout.emailbox);
-        final EditText mEditText = (EditText)d.findViewById(R.id.email_edt);
-        TextView sendEmail = (TextView)d.findViewById(R.id.btn_sendEmail);
+        final EditText mEditText = (EditText) d.findViewById(R.id.email_edt);
+        TextView sendEmail = (TextView) d.findViewById(R.id.btn_sendEmail);
         sendEmail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-                if (isValidEmail(mEditText.getText().toString().trim())){
-                    sendmail(mEditText.getText().toString().trim());
-                    d.dismiss();
-                }
-                else {
+                if (isValidEmail(mEditText.getText().toString().trim())) {
+                    if (!chekNet()){
+                        sendmail(mEditText.getText().toString().trim());
+                        d.dismiss();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"Internet Not Available",Toast.LENGTH_LONG).show();
+                    }
+
+                } else {
                     mEditText.setError("Invalid Email");
                 }
 
@@ -292,14 +292,14 @@ sendEmailBox();
     }
 
 
-    public void sendmail(String s){
+    public void sendmail(String s) {
 
         DatabaseHelper db = new DatabaseHelper(this);
         List<Result> notesList = new ArrayList<>();
 
         notesList.addAll(db.getmailNotes());
 
-        String mHtmlString  = "<!DOCTYPE html>\n" +
+        String mHtmlString = "<!DOCTYPE html>\n" +
                 "<html>\n" +
                 "<head>\n" +
                 "<style>\n" +
@@ -324,34 +324,33 @@ sendEmailBox();
                 "    <th>Units</th>\n" +
                 "  </tr>";
 
-        for (int i=0;i<notesList.size();i++){
+        for (int i = 0; i < notesList.size(); i++) {
             Result mRes = notesList.get(i);
-            mHtmlString =  mHtmlString +  "<tr>"+"<td>"+mRes.getTestName()+"</td>"+"<td>"+mRes.getTestResult()+"</td>"+"<td>"+mRes.getUnit()+"</td>"+"</tr>";
+            mHtmlString = mHtmlString + "<tr>" + "<td>" + mRes.getTestName() + "</td>" + "<td>" + mRes.getTestResult() + "</td>" + "<td>" + mRes.getUnit() + "</td>" + "</tr>";
 
         }
 
-        mHtmlString = mHtmlString+"</table>\n" +
+        mHtmlString = mHtmlString + "</table>\n" +
                 "</br>" +
                 "</br>" +
                 "\n" +
                 "\n" +
-                "<p> </p>"+"\n" +
-                "<p>  </p>"+"\n" +
-                "<span>Thanks</span>"+"\n" +
-                "<p>" +checkUser()+"</p>"+"\n" +
-                "<p>" +adress()+"</p>"+"\n" +
+                "<p> </p>" + "\n" +
+                "<p>  </p>" + "\n" +
+                "<span>Thanks</span>" + "\n" +
+                "<p>" + checkUser() + "</p>" + "\n" +
+                "<p>" + adress() + "</p>" + "\n" +
                 "</body>\n" +
                 "</html>";
 
 
-        if (notesList.size()>0){
-            LongOperation mOperation =  new LongOperation(s, "Water Test Results",mHtmlString);
+        if (notesList.size() > 0) {
+            LongOperation mOperation = new LongOperation(s, "Water Test Results", mHtmlString);
             mOperation.execute();
-            Toast.makeText(getApplicationContext(),"Mail sent to "+s,Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(), "Mail sent to " + s, Toast.LENGTH_LONG).show();
 
-        }
-        else {
-            Toast.makeText(getApplicationContext(),"No Results Recoreded",Toast.LENGTH_LONG).show();
+        } else {
+            Toast.makeText(getApplicationContext(), "No Results Recoreded", Toast.LENGTH_LONG).show();
         }
 
     }
@@ -363,15 +362,27 @@ sendEmailBox();
             return android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
         }
     }
-    public String checkUser(){
-        SharedPreferences mSharedpref = getSharedPreferences("User",MODE_PRIVATE);
-        String name = mSharedpref.getString("name","");
-        return ""+name+"";
+
+    public String checkUser() {
+        SharedPreferences mSharedpref = getSharedPreferences("User", MODE_PRIVATE);
+        String name = mSharedpref.getString("name", "");
+        return "" + name + "";
     }
-    public String adress(){
-        SharedPreferences mSharedpref = getSharedPreferences("User",MODE_PRIVATE);
-        String name = mSharedpref.getString("adress","");
+
+    public String adress() {
+        SharedPreferences mSharedpref = getSharedPreferences("User", MODE_PRIVATE);
+        String name = mSharedpref.getString("adress", "");
         return name;
     }
 
+
+    public boolean chekNet(){
+        ConnectivityManager conMgr =  (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = conMgr.getActiveNetworkInfo();
+        if (netInfo == null){
+           return true;
+        }else{
+           return false;
+        }
+    }
 }

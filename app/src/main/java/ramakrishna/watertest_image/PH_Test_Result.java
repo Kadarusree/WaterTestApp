@@ -176,7 +176,7 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onPause() {
         super.onPause();
-        mediaPlayer.stop();
+        mediaPlayer.release();
     }
 
     public void Store_in_Pref(String value, String range, String color){
@@ -206,6 +206,7 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.release();
             }
         });
         d.show();

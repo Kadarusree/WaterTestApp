@@ -67,4 +67,10 @@ public class IronMainActivity extends AppCompatActivity implements BottomNavigat
         transaction.commit();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

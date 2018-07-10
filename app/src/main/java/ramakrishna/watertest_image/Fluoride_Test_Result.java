@@ -96,7 +96,7 @@ public class Fluoride_Test_Result extends AppCompatActivity implements View.OnCl
 
     public void playMedia(int tone) {
         if (mediaPlayer != null || mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
+            mediaPlayer.release();
             mediaPlayer = null;
         }
 
@@ -142,6 +142,8 @@ public class Fluoride_Test_Result extends AppCompatActivity implements View.OnCl
             @Override
             public void onClick(View view) {
                 d.dismiss();
+
+                mediaPlayer.release();
             }
         });
         d.show();

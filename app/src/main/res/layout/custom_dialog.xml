@@ -30,19 +30,19 @@ android:id="@+id/header"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="English" />
-
-        <RadioButton
-            android:id="@+id/rd_2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/rd_1"
-            android:text="Hindi" />
         <RadioButton
             android:id="@+id/rd_3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/rd_1"
             android:text="Telugu" />
+        <RadioButton
+            android:id="@+id/rd_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rd_1"
+            android:text="Hindi" />
+
 
         <Button
             android:layout_width="fill_parent"

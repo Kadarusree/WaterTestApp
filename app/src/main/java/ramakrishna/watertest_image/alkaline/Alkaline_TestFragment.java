@@ -79,7 +79,7 @@ public class Alkaline_TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-getActivity().onBackPressed();
+getActivity().finish();
             }
         });
 
@@ -289,6 +289,7 @@ getActivity().onBackPressed();
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.release();
             }
         });
         d.show();

@@ -72,5 +72,6 @@ public class TDS_MainActivity extends AppCompatActivity implements BottomNavigat
     @Override
     public void onBackPressed() {
         super.onBackPressed();
+        finish();
     }
 }

@@ -67,4 +67,10 @@ public class HardnessMainActivity extends AppCompatActivity implements BottomNav
         transaction.commit();
 
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }

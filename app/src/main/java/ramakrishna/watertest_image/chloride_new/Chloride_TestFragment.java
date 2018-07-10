@@ -70,10 +70,14 @@ public class Chloride_TestFragment extends Fragment {
         dialog_ViewPage.setCancelable(false);
 
         TextView connect = (TextView) v.findViewById(R.id.btn_restart);
-        TextView help = (TextView) v.findViewById(R.id.btn_ph_complete);
+        final TextView help = (TextView) v.findViewById(R.id.btn_ph_complete);
         final LinearLayout parent_layout = (LinearLayout) v.findViewById(R.id.parent_layout);
-        help.setVisibility(View.INVISIBLE);
-
+help.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View view) {
+        getActivity().finish();
+    }
+});
 
         llDots = (LinearLayout) v.findViewById(R.id.llDots);
         viewPager = (ViewPager) v.findViewById(R.id.pager);
@@ -121,6 +125,7 @@ public class Chloride_TestFragment extends Fragment {
                 playAudio(posi);
                 if (posi == 3) {
                     showDialog();
+                    help.setVisibility(View.VISIBLE);
                 }
 
             }
@@ -186,12 +191,12 @@ public class Chloride_TestFragment extends Fragment {
 
                 int drops = Integer.parseInt(mEditText.getText().toString());
                 int value = drops * 10;
-                if (value < 250) {
+                if (value <= 250) {
                     playResult(value, R.raw.chloride_6, "#F3DA35");
                     show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_low));
 
 
-                } else if (value >= 250) {
+                } else if (value >= 251) {
                     playResult(value, R.raw.chloride_7, "#F13F37");
                     show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_high));
 
@@ -277,6 +282,7 @@ public class Chloride_TestFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.release();
             }
         });
         d.show();

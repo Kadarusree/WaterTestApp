@@ -22,6 +22,7 @@ import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.RadioButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -73,14 +74,14 @@ public class Hardness_TestFragment2 extends Fragment {
         dialog_ViewPage.setCancelable(false);
 
         TextView connect = (TextView) v.findViewById(R.id.btn_restart);
-        TextView help = (TextView) v.findViewById(R.id.btn_ph_complete);
+        final TextView help = (TextView) v.findViewById(R.id.btn_ph_complete);
         final LinearLayout parent_layout = (LinearLayout) v.findViewById(R.id.parent_layout);
         help.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
 
-                // startActivity(new Intent(getActivity(), Fluoride_Test_Result.class));
+                getActivity().finish();
 
             }
         });
@@ -166,6 +167,7 @@ public class Hardness_TestFragment2 extends Fragment {
 
                 if (pos==1){
                     showDialog();
+                    help.setVisibility(View.VISIBLE);
                 }
             }
 
@@ -251,27 +253,43 @@ public class Hardness_TestFragment2 extends Fragment {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (mEditText.getText().toString().trim().length() == 0) {
+                    Toast.makeText(getActivity(), "Enter Drop Count", Toast.LENGTH_SHORT).show();
+                } else {
 
 
-                int drops = Integer.parseInt(mEditText.getText().toString());
-                int value = drops * 10;
-                if (value < 300) {
-                    playResult(value, R.raw.hardness_normal, "#F3DA35");
-                    show_Dialog(value+"", getActivity().getResources().getString(R.string.hardness_normal));
+                    int drops = Integer.parseInt(mEditText.getText().toString());
+                    int value = 0;
+                    if (Constants.selected_type == 1) {
+                        value = drops * 5;
 
 
-                } else if (value >= 300) {
-                    playResult(value, R.raw.hardness_high, "#F13F37");
-                    show_Dialog(value+"", getActivity().getResources().getString(R.string.hardness_high));
+                    } else if (Constants.selected_type == 2) {
+                        value = drops * 2;
 
 
+                    } else if (Constants.selected_type == 3) {
+                        value = drops * 50;
+
+
+                    }
+                    if (value < 300) {
+                        playResult(value, R.raw.hardness_normal, "#F3DA35");
+                        show_Dialog(value + "", getActivity().getResources().getString(R.string.hardness_normal));
+
+
+                    } else if (value >= 300) {
+                        playResult(value, R.raw.hardness_high, "#F13F37");
+                        show_Dialog(value + "", getActivity().getResources().getString(R.string.hardness_high));
+                    }
+
+                    dialog.dismiss();
                 }
-
-                dialog.dismiss();
             }
         });
 
         dialog.show();
+
     }
 
     public void playResult(int value, int id, String color) {

@@ -109,6 +109,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
             @Override
             public void onClick(View view) {
                 d.dismiss();
+                mediaPlayer.release();
             }
         });
         d.show();
@@ -129,7 +130,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
 
     public void playMedia(int tone) {
         if (mediaPlayer != null || mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
+            mediaPlayer.release();
             mediaPlayer = null;
         }
 
@@ -145,8 +146,6 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onPause() {
         super.onPause();
-        if (mediaPlayer.isPlaying()){
-            mediaPlayer.stop();
-        }
+       mediaPlayer.release();
     }
 }

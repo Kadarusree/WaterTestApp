@@ -81,7 +81,7 @@ public class MainActivity extends Activity {
 
 
                 if (rd1.isChecked()) {
-                    String languageToLoad = "te"; // your language
+                    String languageToLoad = "en"; // your language
                     Locale locale = new Locale(languageToLoad);
                     Locale.setDefault(locale);
                     Configuration config = new Configuration();
@@ -98,15 +98,10 @@ public class MainActivity extends Activity {
 
                     }
                 } else if (rd2.isChecked()) {
-                    String languageToLoad = "te"; // your language
-                    Locale locale = new Locale(languageToLoad);
-                    Locale.setDefault(locale);
-                    Configuration config = new Configuration();
-                    config.locale = locale;
-                    getBaseContext().getResources().updateConfiguration(config,
-                            getBaseContext().getResources().getDisplayMetrics());
                     Toast.makeText(getApplicationContext(), "Hindi Version is Coming Soon...", Toast.LENGTH_LONG).show();
                 } else if (rd3.isChecked()) {
+                    rd2.setChecked(false);
+                    rd1.setChecked(false);
                     String languageToLoad = "te"; // your language
                     Locale locale = new Locale(languageToLoad);
                     Locale.setDefault(locale);
@@ -114,7 +109,15 @@ public class MainActivity extends Activity {
                     config.locale = locale;
                     getBaseContext().getResources().updateConfiguration(config,
                             getBaseContext().getResources().getDisplayMetrics());
-                    Toast.makeText(getApplicationContext(), "Telugu Version is Coming Soon...", Toast.LENGTH_LONG).show();
+
+                    if (user.equalsIgnoreCase("")) {
+                        registerDialog();
+                        dialog.dismiss();
+                    } else {
+                        finish();
+                        startActivity(new Intent(getApplicationContext(), Home.class));
+
+                    }
                 }
 
             }
@@ -123,40 +126,33 @@ public class MainActivity extends Activity {
         rd1.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b){
                     rd2.setChecked(false);
-                rd3.setChecked(false);
+                    rd3.setChecked(false);
+                }
+
 
             }
         });
         rd2.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b){
                     rd1.setChecked(false);
-                rd3.setChecked(false);
-                String languageToLoad = "te"; // your language
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
+                    rd3.setChecked(false);
+                }
+
+
             }
         });
         rd3.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
-                if (b)
+                if (b){
                     rd1.setChecked(false);
-                rd2.setChecked(false);
-                String languageToLoad = "te"; // your language
-                Locale locale = new Locale(languageToLoad);
-                Locale.setDefault(locale);
-                Configuration config = new Configuration();
-                config.locale = locale;
-                getBaseContext().getResources().updateConfiguration(config,
-                        getBaseContext().getResources().getDisplayMetrics());
+                    rd2.setChecked(false);
+                }
+
             }
         });
 
@@ -242,8 +238,23 @@ public class MainActivity extends Activity {
 
         mEditor.commit();
 
+        String content = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<body>\n" +
+                "\n" +
+                "<p>Hi "+name+",</p>\n" +
+                "\n" +
+                "\n" +
+                "<h3>Welcome to Chemistry Lab Water Quality Test Kit Application.</h3>\n" +
+                "\n" +
+                "<p>Regards,</br> SCI Team</p>\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>";
 
-        LongOperation mOperation1 =  new LongOperation(email, "Chemistry lab water quality test kit", "Hi "+name+"\n\n"+"Weicome to Chemistry lab water quality test kit Application\n\nRegards\nSCI Team");
+        LongOperation mOperation1 =  new LongOperation(email, "SCI-BIO Engg Solutions", content);
         mOperation1.execute();
 
         try {
@@ -252,7 +263,26 @@ public class MainActivity extends Activity {
             e.printStackTrace();
         }
 
-        LongOperation mOperation2 =  new LongOperation("firebase.srikanth@gmail.com", "New User Registered","Name : "+name+"\n"+"School Name : "+school+"\n"+"Address : "+adress+"\n"+"Email : "+email+"\n"+"Mobile No. : "+phone+"\n");
+
+        String content2 = "<!DOCTYPE html>\n" +
+                "<html>\n" +
+                "<body>\n" +
+                "\n" +
+                "<p>Hi Team,</p>\n" +
+                "\n" +
+                "\n" +
+                "<h4>New User Registered.</h4>\n" +
+                "\n" +
+                "<p>Name : "+name+",<br/>School : "+school+",<br/>Address : "+adress+",<br/>Mobile Number : "+phone+",<br/>Email : "+email+".</p>\n" +
+                "\n" +
+                "\n" +
+                "<p>Regards,</br> SCI Team</p>\n" +
+                "\n" +
+                "\n" +
+                "\n" +
+                "</body>\n" +
+                "</html>\n";
+        LongOperation mOperation2 =  new LongOperation("firebase.srikanth@gmail.com", "New User Registered",content2);
         mOperation2.execute();
 
         finish();

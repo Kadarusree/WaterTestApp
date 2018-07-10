@@ -69,5 +69,11 @@ public class PH_MainActivity extends AppCompatActivity implements BottomNavigati
         transaction.addToBackStack(null);
         transaction.commit();
     }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
+    }
 }
 
