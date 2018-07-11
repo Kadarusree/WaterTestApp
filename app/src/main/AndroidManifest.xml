@@ -45,7 +45,7 @@
             android:label="PH TEST RESULT"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
-            android:screenOrientation="landscape"
+            android:screenOrientation="portrait"
             android:noHistory="true"/>
         <activity
             android:name=".Fluoride_Test_Activity"
@@ -109,6 +109,7 @@
             android:label="TEST SUMMARY"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
             android:noHistory="true"/>
         <activity
             android:name=".Nitrate_Nitrite"
@@ -224,6 +225,7 @@
             android:name=".iron.Iron_Result"
             android:parentActivityName=".iron.IronMainActivity"
             android:screenOrientation="portrait"
+            android:label="IRON RESULT"
             android:launchMode="singleInstance"
             android:noHistory="true"/>
 
@@ -233,6 +235,7 @@
             android:screenOrientation="portrait"
             android:label="HARDNESS TEST"
             android:launchMode="singleInstance"
+
             android:noHistory="true"/>
         <activity
             android:name=".utils.BiologyTest"

@@ -70,42 +70,42 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
 
         switch (view.getId()) {
             case R.id.btn_1:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_1.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_1.getText().toString(),getResources().getString(R.string.ph_low));
                 break;
             case R.id.btn_2:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_2.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_2.getText().toString(),getResources().getString(R.string.ph_low));
 
                 break;
             case R.id.btn_3:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_3.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_3.getText().toString(),getResources().getString(R.string.ph_low));
 
                 break;
             case R.id.btn_4:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_4.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_4.getText().toString(),getResources().getString(R.string.ph_low));
 
                 break;
             case R.id.btn_5:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_5.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_5.getText().toString(),getResources().getString(R.string.ph_low));
 
                 break;
             case R.id.btn_6:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_6.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_6.getText().toString(),getResources().getString(R.string.ph_low));
 
                 break;
             case R.id.btn_7:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.audio_ph_5);
                 Store_in_Pref(btn_7.getText().toString(),"ACIDIC","#F13F37");
                 show_Dialog(btn_7.getText().toString(),getResources().getString(R.string.ph_low));
 
@@ -129,25 +129,25 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
 
                 break;
             case R.id.btn_11:
-                playMedia(R.raw.audio_ph_5);
+                playMedia(R.raw.audio_ph_7);
                 Store_in_Pref(btn_11.getText().toString(),"ALKALINE","#F13F37");
                 show_Dialog(btn_11.getText().toString(),getResources().getString(R.string.ph_high));
 
                 break;
             case R.id.btn_12:
-                playMedia(R.raw.audio_ph_5);
+                playMedia(R.raw.audio_ph_7);
                 Store_in_Pref(btn_12.getText().toString(),"ALKALINE","#F13F37");
                 show_Dialog(btn_12.getText().toString(),getResources().getString(R.string.ph_high));
 
                 break;
             case R.id.btn_13:
-                playMedia(R.raw.audio_7);
+                playMedia(R.raw.audio_ph_7);
                 Store_in_Pref(btn_13.getText().toString(),"ALKALINE","#F13F37");
                 show_Dialog(btn_13.getText().toString(),getResources().getString(R.string.ph_high));
 
                 break;
             case R.id.btn_14:
-                playMedia(R.raw.audio_7);
+                playMedia(R.raw.audio_ph_7);
                 Store_in_Pref(btn_14.getText().toString(),"ALKALINE","#F13F37");
                 show_Dialog(btn_14.getText().toString(),getResources().getString(R.string.ph_high));
 
@@ -160,7 +160,7 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
 
     public void playMedia(int tone) {
         if (mediaPlayer != null || mediaPlayer.isPlaying()) {
-            mediaPlayer.stop();
+            mediaPlayer.release();
             mediaPlayer = null;
         }
 
@@ -199,7 +199,7 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
 
         TextView tv=(TextView)d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The pH value of this water sample is "+value+"\n\n"+text);
+        tv.setText(getResources().getString(R.string.ph_res_text)+" "+value+"\n\n"+text);
 
         Button ok=(Button)d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

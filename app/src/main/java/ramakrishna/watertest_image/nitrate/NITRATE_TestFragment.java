@@ -86,8 +86,8 @@ public class NITRATE_TestFragment extends Fragment {
         images = new int[]{R.drawable.ph_1, R.drawable.nitrate_2, R.drawable.nitrate_3,R.drawable.nitrate_4, R.drawable.test_done
         };
 
-        names = new String[]{getResources().getString(R.string.nitrite_step1),
-                getResources().getString(R.string.nitrite_step2),
+        names = new String[]{getResources().getString(R.string.nitrate_step1),
+                getResources().getString(R.string.nitrate_step2),
                 getResources().getString(R.string.nitrate_step3),
                 getResources().getString(R.string.nitrate_step4),
                 getResources().getString(R.string.nitrate_step5)

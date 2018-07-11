@@ -275,7 +275,7 @@ help.setOnClickListener(new View.OnClickListener() {
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The Chloride value of this water sample is " + value + "\n\n" + text);
+        tv.setText(getResources().getString(R.string.cl_res_text)+" " + value + "\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

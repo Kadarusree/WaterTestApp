@@ -14,7 +14,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="SELECT THE COLOR AS PER THE CHANGE OF WATER COLOR THAT OCCURED IN TEST SAMPLE"
+        android:text="@string/ph_test_result"
         android:layout_gravity="center"
         android:textSize="18dp"
         android:gravity="center"/>

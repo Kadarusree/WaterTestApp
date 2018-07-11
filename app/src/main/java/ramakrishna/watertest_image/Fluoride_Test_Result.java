@@ -135,7 +135,7 @@ public class Fluoride_Test_Result extends AppCompatActivity implements View.OnCl
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The Flouride content of this water sample is " + value + "\n\n" + text);
+        tv.setText(getResources().getString(R.string.fl_res_text)+" "+ value + "\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

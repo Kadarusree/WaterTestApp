@@ -282,7 +282,7 @@ getActivity().finish();
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The Alkalinity value of this water sample is " + value + "PPM\n\n" + text);
+        tv.setText(getResources().getString(R.string.alk_res_text)+" "+ value + "PPM\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

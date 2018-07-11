@@ -83,7 +83,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
 
                 Store_in_Pref("30", "HIGH", "#F13F37");
 
-                show_Dialog("30", getResources().getString(R.string.nitrite_danger));
+                show_Dialog("30", getResources().getString(R.string.nitrate_danger));
 
                 break;
             case R.id.btn_nitrate_r6:
@@ -91,7 +91,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
 
                 Store_in_Pref("50", "HIGH", "#F13F37");
 
-                show_Dialog("50", getResources().getString(R.string.nitrite_danger));
+                show_Dialog("50", getResources().getString(R.string.nitrate_danger));
                 break;
         }
 
@@ -103,7 +103,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
         d.setCanceledOnTouchOutside(false);
         d.setContentView(R.layout.dialog_output);
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
-        tv.setText("The Nitrate value of this water sample is " + value + "\n\n" + text);
+        tv.setText(getResources().getString(R.string.nitarte_res_text)+" "+ value + "\n\n" + text);
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {
             @Override

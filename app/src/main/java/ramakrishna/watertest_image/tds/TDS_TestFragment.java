@@ -311,7 +311,7 @@ public class TDS_TestFragment extends Fragment {
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The TDS content of this water sample is " + value + "\n\n" + text);
+        tv.setText(getResources().getString(R.string.tds_res_text)+" "+ value + "\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

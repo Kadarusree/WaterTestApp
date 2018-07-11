@@ -10,6 +10,7 @@
     <string name="ph_test_step1">Step 1: Take 10ml of water sample in the test bottle</string>
     <string name="ph_test_step2">Step 2: Add 3 – 4 drops pH – Reagent and mix well till water color changes</string>
     <string name="ph_test_step3">Step 3: Once the color changes press Test Complete button</string>
+    <string name="ph_test_result">Select the color as per the change of water color that has occured in the test sample</string>
 
 
     <string name="f__test_step1">Step 1: Take 5ml of water sample in the test bottle</string>
@@ -167,7 +168,7 @@ Taste becomes unpleasant, boiled rice is yellowish, the measure of buffering cap
     <string name="soft_water">For Soft Water, add Total Hardness reagent -3 (TH-3), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-3 required for color change.
 (Pink color sample + reagent) (Result blue water)
 </string>
-    <string name="very_hard_water">        For very hard water, add Total Hardness reagent -5 (TH-5), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-5 required for color change.
+    <string name="very_hard_water">or very hard water, add Total Hardness reagent -5 (TH-5), shake well after each drop until the color changes from pink to blue. count the no. of drops of TH-5 required for color change.
 </string>
     <string name="total_hardness_5">Enter the number of drop count in the text box below, After Entering the value press submit button</string>
 
@@ -181,4 +182,13 @@ Poor leathering with soap, deterioration of clothes, scale forming, Encrustation
     <string name="mb2">2. Keep the bottle at room temperature (preferably at 30-37 centigrade) for 24-48 hours.</string>
     <string name="mb3">3. Observe the colourcolor change of medium against the colourcolor chart.</string>
     <string name="mb4">4. Add a few drops of some disinfectant (Dettol or phenyl) and discard the solution.</string>
+
+
+    <string name="fl_res_text">The Flouride content of this water sample is </string>
+    <string name="ph_res_text">The pH value of this water sample is </string>
+    <string name="tds_res_text">The TDS value of this water sample is </string>
+    <string name="cl_res_text">The Chloride value of this water sample is </string>
+    <string name="alk_res_text">The Alkalinity of this water sample is </string>
+    <string name="nitarte_res_text">The Nitrate value of this water sample is </string>
+    <string name="iron_res_text">The IRON value of this water sample is </string>
 </resources>
