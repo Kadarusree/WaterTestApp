@@ -28,7 +28,7 @@
         android:textSize="15dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:text="TEST NAME"/>
+        android:text="@string/name"/>
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -38,10 +38,10 @@
         android:layout_weight="0.3"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="12dp"
+        android:textSize="15dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:text="TIME"/>
+        android:text="@string/time"/>
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -54,7 +54,7 @@
         android:textSize="15dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:text="VALUE"/>
+        android:text="@string/result"/>
 
     <View
         android:layout_width="1dp"
@@ -65,10 +65,10 @@
         android:layout_weight="0.15"
         android:layout_height="match_parent"
         android:gravity="center"
-        android:textSize="15dp"
+        android:textSize="12dp"
         android:textColor="@color/colorPrimary"
         android:textStyle="bold"
-        android:text="RANGE"/>
+        android:text="@string/remarks"/>
     <View
         android:layout_width="1dp"
         android:layout_height="match_parent"
@@ -392,7 +392,7 @@
                 android:gravity="center"
                 android:textSize="15dp"
 
-                android:text="This water is not suitable for drinking purpose"/>
+                android:text="@string/red_water"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -414,7 +414,7 @@
                 android:gravity="center"
                 android:textSize="15dp"
 
-                android:text="This water recommended for Drinking purpose"/>
+                android:text="@string/yellow_water"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"

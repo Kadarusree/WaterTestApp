@@ -93,16 +93,16 @@ public class Home extends AppCompatActivity
 
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         test_names = new ArrayList<>();
-        test_names.add("PH TEST");
-        test_names.add("FLUORIDE TEST");
-        test_names.add("TDS TEST");
-        test_names.add("NITRATE TEST");
-        test_names.add("CHLORIDE TEST");
-        test_names.add("TOTAL HARDNESS TEST");
-        test_names.add("ALKALINE TEST");
-        test_names.add("IRON TEST");
+        test_names.add(getResources().getString(R.string.db_opt1));
+        test_names.add(getResources().getString(R.string.db_opt2));
+        test_names.add(getResources().getString(R.string.db_opt3));
+        test_names.add(getResources().getString(R.string.db_opt4));
+        test_names.add(getResources().getString(R.string.db_opt5));
+        test_names.add(getResources().getString(R.string.db_opt6));
+        test_names.add(getResources().getString(R.string.db_opt7));
+        test_names.add(getResources().getString(R.string.db_opt8));
         // test_names.add("MICROBIOLOGY TEST");
-        test_names.add("TEST REPORTS");
+        test_names.add(getResources().getString(R.string.db_opt9));
 
         test_images = new ArrayList<>();
         test_images.add(R.drawable.img_phtest);

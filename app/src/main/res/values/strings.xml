@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">WaterTest_Image</string>
+    <string name="app_name">Water Test</string>
     <string name="title_activity_home">Home</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -191,4 +191,33 @@ Poor leathering with soap, deterioration of clothes, scale forming, Encrustation
     <string name="alk_res_text">The Alkalinity of this water sample is </string>
     <string name="nitarte_res_text">The Nitrate value of this water sample is </string>
     <string name="iron_res_text">The IRON value of this water sample is </string>
+    <string name="hardness_res_text">The Total Hardness value of this water sample is  </string>
+
+
+    <string name="hardness_type1">Hard Water</string>
+    <string name="hardness_type2">Soft Water</string>
+    <string name="hardness_type3">Very Hard Water</string>
+    <string name="water_type">Select Your Water</string>
+
+    <string name="red_water">This water is not suitable for drinking purpose</string>
+    <string name="yellow_water">This water recommended for Drinking purpose</string>
+
+    <string name="name">Test Name</string>
+    <string name="time">TIme</string>
+    <string name="result">Value</string>
+    <string name="remarks">Remarks</string>
+
+
+    <string name="db_opt1">PH TEST</string>
+    <string name="db_opt2">FLUORIDE TEST</string>
+    <string name="db_opt3">TDS TEST</string>
+    <string name="db_opt4">NITRATE TEST</string>
+    <string name="db_opt5">CHLORIDE TEST</string>
+    <string name="db_opt6">TOTAL HARDNESS TEST</string>
+    <string name="db_opt7">ALKALINE TEST</string>
+    <string name="db_opt8">IRON TEST</string>
+    <string name="db_opt9">TEST REPORTS</string>
+
+    <string name="result_">Result</string>
+
 </resources>

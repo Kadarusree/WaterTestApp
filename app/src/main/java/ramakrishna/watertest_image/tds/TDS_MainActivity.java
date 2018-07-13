@@ -31,7 +31,7 @@ public class TDS_MainActivity extends AppCompatActivity implements BottomNavigat
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("TDS TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt3));
         toolbar.setElevation(0f);
 
     }

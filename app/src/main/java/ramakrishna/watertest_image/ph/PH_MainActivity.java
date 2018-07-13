@@ -33,7 +33,7 @@ public class PH_MainActivity extends AppCompatActivity implements BottomNavigati
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("PH TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt1));
         toolbar.setElevation(0f);
 
     }

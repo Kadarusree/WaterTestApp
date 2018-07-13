@@ -31,7 +31,7 @@ public class ChlorideMainActivity extends AppCompatActivity implements BottomNav
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("CHLORIDE TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt5));
         toolbar.setElevation(0f);
 
     }

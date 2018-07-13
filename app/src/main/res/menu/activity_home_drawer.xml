@@ -5,35 +5,35 @@
         <item
             android:id="@+id/nav_ph"
             android:icon="@drawable/ic_laboratory"
-            android:title="PH" />
+            android:title="@string/db_opt1" />
         <item
             android:id="@+id/nav_fl"
             android:icon="@drawable/ic_laboratory"
-            android:title="FLOURIDE" />
+            android:title="@string/db_opt2"  />
         <item
             android:id="@+id/nav_tds"
             android:icon="@drawable/ic_laboratory"
-            android:title="TDS" />
+            android:title="@string/db_opt3"  />
         <item
             android:id="@+id/nav_nitrate"
             android:icon="@drawable/ic_laboratory"
-            android:title="NITRITE" />
+            android:title="@string/db_opt4"  />
         <item
             android:id="@+id/nav_arsenic"
             android:icon="@drawable/ic_laboratory"
-            android:title="CHLORIDE" />
+            android:title="@string/db_opt5" />
         <item
             android:id="@+id/nav_hardness"
             android:icon="@drawable/ic_laboratory"
-            android:title="TOTAL HARDNESS" />
+            android:title="@string/db_opt6"  />
         <item
             android:id="@+id/nav_alkaline"
             android:icon="@drawable/ic_laboratory"
-            android:title="ALKALINE" />
+            android:title="@string/db_opt7"  />
         <item
             android:id="@+id/nav_iron"
             android:icon="@drawable/ic_laboratory"
-            android:title="IRON" />
+            android:title="@string/db_opt8"  />
 
     </group>
 
@@ -42,7 +42,7 @@
             <item
                 android:id="@+id/nav_test_summary"
                 android:icon="@drawable/ic_test"
-                android:title="TEST SUMMARY" />
+                android:title="@string/db_opt9"  />
 
             <item
                 android:id="@+id/nav_test_reset"

@@ -21,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.LinearLayout.LayoutParams;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import ramakrishna.watertest_image.Fluoride_Test_Result;
 import ramakrishna.watertest_image.R;
@@ -188,22 +189,27 @@ help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
-
-                int drops = Integer.parseInt(mEditText.getText().toString());
-                int value = drops * 10;
-                if (value <= 250) {
-                    playResult(value, R.raw.chloride_6, "#F3DA35");
-                    show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_low));
-
-
-                } else if (value >= 251) {
-                    playResult(value, R.raw.chloride_7, "#F13F37");
-                    show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_high));
+                  if (mEditText.getText().toString().trim().length()==0){
+                      Toast.makeText(getActivity(),"Enter Drop Count",Toast.LENGTH_SHORT).show();
+                  }
+                  else {
+                      int drops = Integer.parseInt(mEditText.getText().toString());
+                      int value = drops * 10;
+                      if (value <= 250) {
+                          playResult(value, R.raw.chloride_5, "#F3DA35");
+                          show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_low));
 
 
-                }
+                      } else if (value >= 251) {
+                          playResult(value, R.raw.chloride_6, "#F13F37");
+                          show_Dialog(value+"", getActivity().getResources().getString(R.string.chloride_high));
 
-                dialog.dismiss();
+
+                      }
+
+                      dialog.dismiss();
+                  }
+
             }
         });
 
@@ -226,12 +232,12 @@ help.setOnClickListener(new View.OnClickListener() {
                 break;
             case 2:
 
-                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.chloride_4);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.chloride_3);
                 mediaPlayer.start();
                 break;
             case 3:
 
-                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.chloride_5);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.chloride_4);
                 mediaPlayer.start();
                 break;
             case 4:

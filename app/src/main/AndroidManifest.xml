@@ -34,7 +34,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PH_Test_Activity"
-            android:label="@string/ph_test"
+            android:label="@string/db_opt1"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
@@ -94,7 +94,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".TDS_Options"
-            android:label="TDS TEST"
+            android:label="@string/db_opt3"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait" />
@@ -106,7 +106,7 @@
             android:screenOrientation="portrait" />
         <activity
             android:name=".Test_Reports"
-            android:label="TEST SUMMARY"
+            android:label="@string/db_opt9"
             android:launchMode="singleInstance"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
@@ -154,7 +154,7 @@
             android:parentActivityName=".Nitrite_Test" />
         <activity
             android:name=".Chloride.ChlorideActivity"
-            android:label="Chloride"
+            android:label="@string/db_opt5"
             android:parentActivityName=".Home"
             android:noHistory="true"/>
         <activity
@@ -184,7 +184,8 @@
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:label="@string/db_opt3"/>
         <activity
             android:name=".nitrite.NITRITE_MainActivity"
             android:parentActivityName=".Home"
@@ -196,22 +197,29 @@
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
+            android:label="@string/db_opt4"
             android:noHistory="true"/>
         <activity
             android:name=".chloride_new.ChlorideMainActivity"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:label="@string/db_opt5"
+            />
         <activity
             android:name=".alkaline.AlkalineMainActivity"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:label="@string/db_opt7"
+            />
         <activity
             android:name=".iron.IronMainActivity"
             android:parentActivityName=".Home"
+            android:label="@string/db_opt8"
+
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
             android:noHistory="true"/>
@@ -220,6 +228,8 @@
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
+            android:label="@string/db_opt6"
+
             android:noHistory="true"/>
         <activity
             android:name=".iron.Iron_Result"
@@ -235,7 +245,6 @@
             android:screenOrientation="portrait"
             android:label="HARDNESS TEST"
             android:launchMode="singleInstance"
-
             android:noHistory="true"/>
         <activity
             android:name=".utils.BiologyTest"

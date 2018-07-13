@@ -31,7 +31,7 @@ public class NITRATE_MainActivity extends AppCompatActivity implements BottomNav
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("NITRATE TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt4));
         toolbar.setElevation(0f);
 
     }

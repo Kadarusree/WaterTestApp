@@ -79,7 +79,7 @@ public class Alkaline_TestFragment extends Fragment {
             @Override
             public void onClick(View v) {
 
-getActivity().finish();
+                getActivity().finish();
             }
         });
 
@@ -87,7 +87,7 @@ getActivity().finish();
         llDots = (LinearLayout) v.findViewById(R.id.llDots);
         viewPager = (ViewPager) v.findViewById(R.id.pager);
 
-        images = new int[]{R.drawable.alk_1, R.drawable.alk_2, R.drawable.alk_3,R.drawable.alk_ra_1
+        images = new int[]{R.drawable.alk_1, R.drawable.alk_2, R.drawable.alk_3, R.drawable.alk_ra_1
         };
 
         names = new String[]{getResources().getString(R.string.alk_1),
@@ -120,7 +120,7 @@ getActivity().finish();
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
             @Override
             public void onPageSelected(int posi) {
- for(int i = 0; i < adapter.getCount(); i++) {
+                for (int i = 0; i < adapter.getCount(); i++) {
                     if (i != posi) {
                         ((ImageView) llDots.findViewWithTag(i)).setSelected(false);
                     }
@@ -129,10 +129,9 @@ getActivity().finish();
 
                 playAudio(posi);
 
-                if (posi==(names.length-1)){
+                if (posi == (names.length - 1)) {
                     help.setVisibility(View.VISIBLE);
-                }
-                else {
+                } else {
                     help.setVisibility(View.INVISIBLE);
 
                 }
@@ -141,7 +140,7 @@ getActivity().finish();
             @Override
             public void onPageScrolled(int arg0, float arg1, int arg2) {
                 pos = arg0;
-                if (pos==3){
+                if (pos == 3) {
                     showDialog();
                 }
             }
@@ -160,8 +159,8 @@ getActivity().finish();
                 if (pos < images.length) {
                     pos++;
 
-                    if (pos==3){
-                       // showDialog();
+                    if (pos == 3) {
+                        // showDialog();
                         playAudio(3);
                     }
                     getSlide();
@@ -174,7 +173,7 @@ getActivity().finish();
 
     private void getSlide() {
         viewPager.setCurrentItem(pos);
-      //  myHanldler.postDelayed(run, 3000);
+        //  myHanldler.postDelayed(run, 3000);
     }
 
     Runnable run = new Runnable() {
@@ -188,28 +187,27 @@ getActivity().finish();
     };
 
 
-
-    public void playAudio(int position){
-        if (mediaPlayer!=null){
+    public void playAudio(int position) {
+        if (mediaPlayer != null) {
             mediaPlayer.release();
         }
-        switch (position){
+        switch (position) {
 
             case 0:
-                mediaPlayer= MediaPlayer.create(getActivity(),R.raw.alk_1);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alk_1);
                 mediaPlayer.start();
                 break;
             case 1:
-                mediaPlayer= MediaPlayer.create(getActivity(),R.raw.alk_2);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alk_2);
                 mediaPlayer.start();
                 break;
             case 2:
 
-                mediaPlayer= MediaPlayer.create(getActivity(),R.raw.alk_3);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alk_3);
                 mediaPlayer.start();
                 break;
             case 3:
-                mediaPlayer= MediaPlayer.create(getActivity(),R.raw.alk_4);
+                mediaPlayer = MediaPlayer.create(getActivity(), R.raw.alk_4);
                 mediaPlayer.start();
                 break;
         }
@@ -220,7 +218,7 @@ getActivity().finish();
     @Override
     public void onPause() {
         super.onPause();
-        if (mediaPlayer!=null){
+        if (mediaPlayer != null) {
             mediaPlayer.release();
         }
     }
@@ -237,23 +235,26 @@ getActivity().finish();
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if (mEditText.getText().toString().trim().length() == 0) {
+                    Toast.makeText(getActivity(), "Enter Drop Count", Toast.LENGTH_SHORT).show();
+                } else {
+                    int drops = Integer.parseInt(mEditText.getText().toString());
+                    int value = drops * 5;
+                    if (value < 200) {
+                        playResult(value, R.raw.alk_5, "#F3DA35");
+                        showRDialog(value + "", getActivity().getResources().getString(R.string.alk_under_200));
 
 
-                int drops = Integer.parseInt(mEditText.getText().toString());
-                int value = drops * 5;
-                if (value < 200) {
-                    playResult(value, R.raw.alk_5, "#F3DA35");
-                    showRDialog(value+"", getActivity().getResources().getString(R.string.alk_under_200));
+                    } else if (value >= 200) {
+                        playResult(value, R.raw.alk_6, "#F13F37");
+                        showRDialog(value + "", getActivity().getResources().getString(R.string.alk_above_200));
 
 
-                } else if (value>= 200) {
-                    playResult(value, R.raw.alk_6, "#F13F37");
-                    showRDialog(value+"", getActivity().getResources().getString(R.string.alk_above_200));
+                    }
 
-
+                    dialog.dismiss();
                 }
 
-                dialog.dismiss();
             }
         });
 
@@ -282,7 +283,7 @@ getActivity().finish();
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText(getResources().getString(R.string.alk_res_text)+" "+ value + "PPM\n\n" + text);
+        tv.setText(getResources().getString(R.string.alk_res_text) + " " + value + "PPM\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

@@ -314,7 +314,7 @@ public class Hardness_TestFragment2 extends Fragment {
 
         TextView tv = (TextView) d.findViewById(R.id.tv_output_text);
 
-        tv.setText("The Total Hardness value of this water sample is " + value + "\n\n" + text);
+        tv.setText(getActivity().getResources().getString(R.string.hardness_res_text) + value + "\n\n" + text);
 
         Button ok = (Button) d.findViewById(R.id.btn_ok);
         ok.setOnClickListener(new View.OnClickListener() {

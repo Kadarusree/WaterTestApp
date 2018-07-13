@@ -31,7 +31,7 @@ public class IronMainActivity extends AppCompatActivity implements BottomNavigat
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("IRON TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt8));
         toolbar.setElevation(0f);
 
     }

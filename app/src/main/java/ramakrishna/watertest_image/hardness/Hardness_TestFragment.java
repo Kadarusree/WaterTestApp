@@ -201,11 +201,11 @@ public class Hardness_TestFragment extends Fragment {
         final RadioButton rd3 = (RadioButton) dialog.findViewById(R.id.rd_3);
         final TextView td_header_text = (TextView) dialog.findViewById(R.id.header);
 
-        td_header_text.setText("Select Your Water");
+        td_header_text.setText(getActivity().getResources().getString(R.string.water_type));
 
-        rd1.setText("Hard Water");
-        rd2.setText("Softwater");
-        rd3.setText("Very Hard Water");
+        rd1.setText(getActivity().getResources().getString(R.string.hardness_type1));
+        rd2.setText(getActivity().getResources().getString(R.string.hardness_type2));
+        rd3.setText(getActivity().getResources().getString(R.string.hardness_type3));
 
 
         Button btn = (Button) dialog.findViewById(R.id.btn_1);

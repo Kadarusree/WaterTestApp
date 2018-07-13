@@ -31,7 +31,7 @@ public class HardnessMainActivity extends AppCompatActivity implements BottomNav
         BottomNavigationView navigation = (BottomNavigationView) findViewById(R.id.navigation);
         navigation.setOnNavigationItemSelectedListener(this);
 
-        toolbar.setTitle("TOTAL HARDNESS TEST");
+        toolbar.setTitle(getResources().getString(R.string.db_opt6));
         toolbar.setElevation(0f);
 
     }
