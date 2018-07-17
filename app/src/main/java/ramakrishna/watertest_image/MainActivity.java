@@ -36,16 +36,17 @@ public class MainActivity extends Activity {
         getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         Constants.audio_played = false;
-        mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.audio_1);
+        mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.ad1);
         mPlayer.start();
-        mPlayer.setOnBufferingUpdateListener(new MediaPlayer.OnBufferingUpdateListener() {
-            @Override
-            public void onBufferingUpdate(MediaPlayer mediaPlayer, int i) {
-
-            }
-        });
 
         setContentView(R.layout.activity_main);
+
+        mPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                getLanguageDialog();
+            }
+        });
 
         new Handler().postDelayed(new Runnable() {
 
@@ -53,8 +54,8 @@ public class MainActivity extends Activity {
             @Override
             public void run() {
 
-                mPlayer.release();
-                getLanguageDialog();
+             //   mPlayer.release();
+            //    getLanguageDialog();
 
             }
         }, SPLASH_TIME_OUT);
@@ -156,9 +157,7 @@ public class MainActivity extends Activity {
             }
         });
 
-        mPlayer = MediaPlayer.create(getApplicationContext(), R.raw.a1);
-        mPlayer.start();
-        // now that the dialog is set up, it's time to show it
+
         dialog.show();
     }
 

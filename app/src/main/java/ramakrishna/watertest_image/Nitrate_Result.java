@@ -75,7 +75,7 @@ public class Nitrate_Result extends AppCompatActivity implements View.OnClickLis
 
                 Store_in_Pref("20", "HIGH", "#F13F37");
 
-                show_Dialog("20", getResources().getString(R.string.nitrite_danger));
+                show_Dialog("20", getResources().getString(R.string.nitrate_danger));
 
                 break;
             case R.id.btn_nitrate_r5:

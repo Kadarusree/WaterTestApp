@@ -340,6 +340,7 @@ public class Home extends AppCompatActivity
                 "<span>Thanks</span>" + "\n" +
                 "<p>" + checkUser() + "</p>" + "\n" +
                 "<p>" + adress() + "</p>" + "\n" +
+                "<p>" + phone() + "</p>" + "\n" +
                 "</body>\n" +
                 "</html>";
 
@@ -353,6 +354,12 @@ public class Home extends AppCompatActivity
             Toast.makeText(getApplicationContext(), "No Results Recoreded", Toast.LENGTH_LONG).show();
         }
 
+    }
+
+    private String phone() {
+        SharedPreferences mSharedpref = getSharedPreferences("User", MODE_PRIVATE);
+        String name = mSharedpref.getString("phone", "");
+        return "" + name + "";
     }
 
     public final static boolean isValidEmail(CharSequence target) {

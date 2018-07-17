@@ -87,7 +87,7 @@ public class Alkaline_TestFragment extends Fragment {
         llDots = (LinearLayout) v.findViewById(R.id.llDots);
         viewPager = (ViewPager) v.findViewById(R.id.pager);
 
-        images = new int[]{R.drawable.alk_1, R.drawable.alk_2, R.drawable.alk_3, R.drawable.alk_ra_1
+        images = new int[]{R.drawable.ph_1, R.drawable.alk_2, R.drawable.alk_3, R.drawable.alk_3
         };
 
         names = new String[]{getResources().getString(R.string.alk_1),

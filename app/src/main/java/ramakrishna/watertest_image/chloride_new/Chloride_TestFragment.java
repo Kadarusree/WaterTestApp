@@ -83,7 +83,7 @@ help.setOnClickListener(new View.OnClickListener() {
         llDots = (LinearLayout) v.findViewById(R.id.llDots);
         viewPager = (ViewPager) v.findViewById(R.id.pager);
 
-        images = new int[]{R.drawable.ph_1, R.drawable.cl_2, R.drawable.cl_3, R.drawable.cl_5
+        images = new int[]{R.drawable.ph_1, R.drawable.cl_2, R.drawable.cl_3, R.drawable.cl_3
         };
 
         names = new String[]{getResources().getString(R.string.chloride_step1),
