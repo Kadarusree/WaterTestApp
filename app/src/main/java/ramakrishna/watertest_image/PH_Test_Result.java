@@ -129,15 +129,15 @@ public class PH_Test_Result extends AppCompatActivity implements View.OnClickLis
 
                 break;
             case R.id.btn_11:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.ph_above_11);
                 Store_in_Pref(btn_11.getText().toString(),"ALKALINE","#F13F37");
-                show_Dialog(btn_11.getText().toString(),getResources().getString(R.string.ph_high));
+                show_Dialog(btn_11.getText().toString(),"");
 
                 break;
             case R.id.btn_12:
-                playMedia(R.raw.audio_ph_7);
+                playMedia(R.raw.ph_above_11);
                 Store_in_Pref(btn_12.getText().toString(),"ALKALINE","#F13F37");
-                show_Dialog(btn_12.getText().toString(),getResources().getString(R.string.ph_high));
+                show_Dialog(btn_12.getText().toString(),"");
 
                 break;
             case R.id.btn_13:

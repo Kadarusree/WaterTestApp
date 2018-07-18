@@ -1,5 +1,7 @@
 package ramakrishna.watertest_image.utils;
 
+import java.util.Locale;
+
 public class Constants {
 
     public static int CURRENT_TEST = 0;
@@ -15,4 +17,5 @@ public class Constants {
     public static String user;
     public static int HARDNESSEST=8;
     public static int selected_type;
+    public static Locale locale;
 }

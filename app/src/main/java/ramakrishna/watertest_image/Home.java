@@ -7,6 +7,7 @@ import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v7.widget.DefaultItemAnimator;
@@ -390,6 +391,14 @@ public class Home extends AppCompatActivity
            return true;
         }else{
            return false;
+        }
+    }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+         Constants.locale    = getApplicationContext().getResources().getConfiguration().getLocales().get(0);
         }
     }
 }

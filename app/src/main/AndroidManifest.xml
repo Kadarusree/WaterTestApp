@@ -19,7 +19,6 @@
             android:name=".ph.PH_MainActivity"
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
-            android:noHistory="true"
             android:launchMode="singleInstance"/>
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -44,7 +43,7 @@
             android:name=".PH_Test_Result"
             android:label="PH TEST RESULT"
             android:launchMode="singleInstance"
-            android:parentActivityName=".Home"
+            android:parentActivityName=".ph.PH_MainActivity"
             android:screenOrientation="portrait"
             />
         <activity
