@@ -11,10 +11,12 @@ import android.webkit.WebViewClient;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import ramakrishna.watertest_image.R;
 import ramakrishna.watertest_image.database.DatabaseHelper;
 import ramakrishna.watertest_image.database.Result;
+import ramakrishna.watertest_image.utils.Constants;
 
 /**
  * Created by srikanthk on 4/28/2018.
@@ -33,8 +35,18 @@ public class TDS_HelpFragment extends Fragment {
         mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        mWebView.loadUrl("file:///android_asset/tds.html");
+        Locale mBackedUpLocale = Constants.locale;
 
+
+
+
+        if (mBackedUpLocale.getLanguage().equalsIgnoreCase("te")){
+            mWebView.loadUrl("file:///android_asset/no.html");
+        }
+        else{
+            mWebView.loadUrl("file:///android_asset/tds.html");
+
+        }
         return v;
     }
 }

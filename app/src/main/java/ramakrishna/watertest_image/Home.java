@@ -400,5 +400,8 @@ public class Home extends AppCompatActivity
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
          Constants.locale    = getApplicationContext().getResources().getConfiguration().getLocales().get(0);
         }
+        else{
+            Constants.locale =    getResources().getConfiguration().locale;
+        }
     }
 }

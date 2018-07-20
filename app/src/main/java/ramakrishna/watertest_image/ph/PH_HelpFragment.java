@@ -40,17 +40,18 @@ public class PH_HelpFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_ph__description, null);
 
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            mBackedUpLocale = Constants.locale;
-        }
 
-
-       // Toast.makeText(getActivity(),mBackedUpLocale.getLanguage()+"",Toast.LENGTH_SHORT).show();
+        // Toast.makeText(getActivity(),mBackedUpLocale.getLanguage()+"",Toast.LENGTH_SHORT).show();
         mWebView = (WebView) v.findViewById(R.id.webView);
         mWebView.setWebViewClient(new WebViewClient());
 
         mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
+
+
+        mBackedUpLocale = Constants.locale;
+
+
 
 
         if (mBackedUpLocale.getLanguage().equalsIgnoreCase("te")){

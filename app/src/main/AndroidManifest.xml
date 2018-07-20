@@ -143,9 +143,8 @@
         <activity
             android:name=".Nitrate_Result"
             android:label="Nitrate Result"
-            android:parentActivityName=".Nitrate_Test"
+            android:parentActivityName=".nitrate.NITRATE_MainActivity"
             android:launchMode="singleInstance"
-            android:noHistory="true"
             />
         <activity
             android:name=".Nitrite_Result"
@@ -196,7 +195,7 @@
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
             android:label="@string/db_opt4"
-            android:noHistory="true"/>
+            />
         <activity
             android:name=".chloride_new.ChlorideMainActivity"
             android:parentActivityName=".Home"
@@ -226,9 +225,7 @@
             android:parentActivityName=".Home"
             android:screenOrientation="portrait"
             android:launchMode="singleInstance"
-            android:label="@string/db_opt6"
-
-            android:noHistory="true"/>
+            android:label="@string/db_opt6" />
         <activity
             android:name=".iron.Iron_Result"
             android:parentActivityName=".iron.IronMainActivity"
@@ -243,7 +240,7 @@
             android:screenOrientation="portrait"
             android:label="HARDNESS TEST"
             android:launchMode="singleInstance"
-            android:noHistory="true"/>
+           />
         <activity
             android:name=".utils.BiologyTest"
             android:label="MICROBIOLOGY TEST"

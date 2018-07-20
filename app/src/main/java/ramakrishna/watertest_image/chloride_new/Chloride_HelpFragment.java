@@ -9,7 +9,10 @@ import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
+import java.util.Locale;
+
 import ramakrishna.watertest_image.R;
+import ramakrishna.watertest_image.utils.Constants;
 
 /**
  * Created by srikanthk on 4/28/2018.
@@ -28,8 +31,19 @@ public class Chloride_HelpFragment extends Fragment {
         mWebView.getSettings().setBuiltInZoomControls(true);
         mWebView.getSettings().setJavaScriptEnabled(true);
 
-        mWebView.loadUrl("file:///android_asset/chloride.htm");
+       // mWebView.loadUrl("file:///android_asset/chloride.htm");
+        Locale mBackedUpLocale = Constants.locale;
 
+
+
+
+        if (mBackedUpLocale.getLanguage().equalsIgnoreCase("te")){
+            mWebView.loadUrl("file:///android_asset/no.html");
+        }
+        else{
+            mWebView.loadUrl("file:///android_asset/chloride.htm");
+
+        }
         return v;
     }
 }
