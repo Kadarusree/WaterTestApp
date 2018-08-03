@@ -1,6 +1,9 @@
 package ramakrishna.watertest_image.chloride_new;
 
 import android.app.Fragment;
+import android.content.res.Configuration;
+import android.content.res.Resources;
+import android.os.Build;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -20,6 +23,9 @@ import ramakrishna.watertest_image.utils.Constants;
 
 public class Chloride_HelpFragment extends Fragment {
 
+    private Locale mBackedUpLocale = null;
+
+
     WebView mWebView;
     @Nullable
     @Override
@@ -32,18 +38,56 @@ public class Chloride_HelpFragment extends Fragment {
         mWebView.getSettings().setJavaScriptEnabled(true);
 
        // mWebView.loadUrl("file:///android_asset/chloride.htm");
-        Locale mBackedUpLocale = Constants.locale;
+         mBackedUpLocale = Constants.locale;
 
 
 
 
         if (mBackedUpLocale.getLanguage().equalsIgnoreCase("te")){
-            mWebView.loadUrl("file:///android_asset/no.html");
+            mWebView.loadUrl("file:///android_asset/chloride_telugu.htm");
         }
         else{
             mWebView.loadUrl("file:///android_asset/chloride.htm");
 
         }
         return v;
+    }
+
+    public void fixLocale() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
+            Resources resources = getResources();
+            final Configuration config = resources.getConfiguration();
+
+            if (null != mBackedUpLocale && !config.getLocales().get(0).equals(mBackedUpLocale)) {
+                Locale.setDefault(mBackedUpLocale);
+                final Configuration newConfig = new Configuration(config);
+                newConfig.setLocale(new Locale(mBackedUpLocale.getLanguage(), mBackedUpLocale.getCountry()));
+                resources.updateConfiguration(newConfig, null);
+            }
+
+            // Also this must be overridden, otherwise for example when opening a dialog the title could have one language and the content other, because
+            // different contexts are used to get the resources.
+            Resources appResources = getActivity().getResources();
+            final Configuration appConfig = appResources.getConfiguration();
+            if (null != mBackedUpLocale && !appConfig.getLocales().get(0).equals(mBackedUpLocale)) {
+                Locale.setDefault(mBackedUpLocale);
+                final Configuration newConfig = new Configuration(appConfig);
+                newConfig.setLocale(new Locale(mBackedUpLocale.getLanguage(), mBackedUpLocale.getCountry()));
+                appResources.updateConfiguration(newConfig, null);
+            }
+
+        }
+    }
+
+    @Override
+    public void onStop() {
+        super.onStop();
+        fixLocale();
+    }
+    @Override
+    public void onPause() {
+        super.onPause();
+        fixLocale();
+
     }
 }

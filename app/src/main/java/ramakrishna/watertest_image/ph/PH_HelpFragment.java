@@ -150,4 +150,10 @@ public class PH_HelpFragment extends Fragment {
         super.onStop();
         fixLocale();
     }
+    @Override
+    public void onPause() {
+        super.onPause();
+        fixLocale();
+
+    }
 }

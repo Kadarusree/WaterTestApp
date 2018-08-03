@@ -240,12 +240,12 @@ public class Alkaline_TestFragment extends Fragment {
                 } else {
                     int drops = Integer.parseInt(mEditText.getText().toString());
                     int value = drops * 5;
-                    if (value < 200) {
+                    if (value <= 200) {
                         playResult(value, R.raw.alk_5, "#F3DA35");
                         showRDialog(value + "", getActivity().getResources().getString(R.string.alk_under_200));
 
 
-                    } else if (value >= 200) {
+                    } else if (value > 200) {
                         playResult(value, R.raw.alk_6, "#F13F37");
                         showRDialog(value + "", getActivity().getResources().getString(R.string.alk_above_200));
 
