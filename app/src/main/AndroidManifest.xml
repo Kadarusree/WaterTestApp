@@ -30,6 +30,7 @@
         <activity
             android:name=".Home"
             android:label="@string/title_activity_home"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".PH_Test_Activity"
@@ -113,64 +114,92 @@
         <activity
             android:name=".Nitrate_Nitrite"
             android:label="Nitrate/Nitrite"
-            android:parentActivityName=".Home" />
+            android:parentActivityName=".Home"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrate"
             android:label="Nitrate"
-            android:parentActivityName=".Nitrate_Nitrite" />
+            android:parentActivityName=".Nitrate_Nitrite"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrite"
             android:label="Nitrite"
-            android:parentActivityName=".Nitrate_Nitrite" />
+            android:parentActivityName=".Nitrate_Nitrite"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrate_Description"
             android:label="What is Nitrate"
-            android:parentActivityName=".Nitrate" />
+            android:parentActivityName=".Nitrate"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrite_Description"
             android:label="What is Nitrite"
-            android:parentActivityName=".Nitrite" />
+            android:parentActivityName=".Nitrite"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrate_Test"
             android:label="Nitrate Test"
             android:parentActivityName=".Nitrate"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrite_Test"
             android:label="Nitrite Test"
             android:parentActivityName=".Nitrite"
-            android:launchMode="singleInstance"/>
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Nitrate_Result"
             android:label="Nitrate Result"
             android:parentActivityName=".nitrate.NITRATE_MainActivity"
             android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+
             />
         <activity
             android:name=".Nitrite_Result"
             android:label="Nitrite Result"
-            android:parentActivityName=".Nitrite_Test" />
+            android:parentActivityName=".Nitrite_Test"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Chloride.ChlorideActivity"
             android:label="@string/db_opt5"
             android:parentActivityName=".Home"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Chloride.Chloride_Description"
             android:label="What is Chloride?"
-            android:parentActivityName=".Chloride.ChlorideActivity" />
+            android:parentActivityName=".Chloride.ChlorideActivity"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".Chloride.ChlorideTest"
             android:label="Chloride Test"
             android:parentActivityName=".Chloride.Chloride_Description"
             android:launchMode="singleInstance"
-            android:noHistory="true"/>
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".PH_Test_Result_new"
             android:label="PH Result"
             android:parentActivityName=".PH_Test_Activity"
-            android:launchMode="singleInstance"/>
-        <activity android:name=".Main2Activity" />
+            android:launchMode="singleInstance"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".Main2Activity"
+            android:screenOrientation="portrait"
+            />
         <activity
             android:name=".fluoride.FluorideMainActivity"
             android:parentActivityName=".Home"
