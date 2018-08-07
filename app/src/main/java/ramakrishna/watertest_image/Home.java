@@ -1,12 +1,14 @@
 package ramakrishna.watertest_image;
 
 import android.app.Dialog;
+import android.content.ActivityNotFoundException;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.media.MediaPlayer;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
+import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
@@ -238,7 +240,10 @@ public class Home extends AppCompatActivity
             sendEmailBox();
         } else if (id == R.id.nav_send) {
             finish();
-        } else if (id == R.id.nav_hardness) {
+        }
+     else if (id == R.id.youtube) {
+        watchYoutubeVideo(this,"M5LsnxbtwWk");
+    }else if (id == R.id.nav_hardness) {
             startActivity(new Intent(getApplicationContext(), HardnessMainActivity.class));
         } else if (id == R.id.nav_test_reset) {
            /* SharedPreferences mSharedPreferences=getSharedPreferences("WATER_TEST", Context.MODE_PRIVATE);
@@ -402,6 +407,17 @@ public class Home extends AppCompatActivity
         }
         else{
             Constants.locale =    getResources().getConfiguration().locale;
+        }
+    }
+
+    public static void watchYoutubeVideo(Context context, String id){
+        Intent appIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("vnd.youtube:" + id));
+        Intent webIntent = new Intent(Intent.ACTION_VIEW,
+                Uri.parse("http://www.youtube.com/watch?v=" + id));
+        try {
+            context.startActivity(appIntent);
+        } catch (ActivityNotFoundException ex) {
+            context.startActivity(webIntent);
         }
     }
 }

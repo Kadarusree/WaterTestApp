@@ -35,6 +35,10 @@
             android:icon="@drawable/ic_laboratory"
             android:title="@string/db_opt8"  />
 
+        <item
+            android:id="@+id/youtube"
+            android:icon="@drawable/ic_watch_video_black_24dp"
+            android:title="@string/db_opt10"  />
     </group>
 
     <item android:title="Communicate">
